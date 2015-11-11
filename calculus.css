@@ -8,10 +8,12 @@ body{
 }
 
 div[equation]{
-    width:100%;
+    width:auto;
     height: 100px;
-    display:inline-block;
+    display:block;
     text-align:center;
+    margin-left:auto;
+    margin-right:auto;
 }
 
 div[equation] sup{
@@ -19,10 +21,10 @@ div[equation] sup{
 }
 
 
-div[integral], div[doubleintegral], div[tripleintegral]{
+div[integral], div[doubleintegral], div[tripleintegral], div[summation]{
     width:auto;
     display:inline-block;
-    margin-right:3px;
+    margin-right:9px;
     margin-left:-4px;
     padding-left:9px;
     box-sizing: border-box;
@@ -36,6 +38,8 @@ div[integral]::before{
     font-size:5em;
     float:left;
 }
+
+
 
 
 div[integral] > div[upperbound]{
@@ -163,6 +167,52 @@ div[tripleintegral] > div[of]{
     font-size:1.5em;
 }
 
+
+
+div[summation]::before{
+    content: "\2211";
+    font-size:5em;
+    float:left;
+}
+
+
+div[summation] > div[upperbound]{
+    height:25%;
+    width:auto;
+    position:absolute;
+    top:2px;
+    font-size:1em;
+    font-style: italic;
+    width:50px;
+
+}
+
+div[summation] > div[lowerbound]{
+    height:25%;
+    width:auto;
+    width:50px;
+    position:absolute;
+    bottom:-7px;
+    font-style: italic;
+    font-size:1em;
+
+}
+
+
+
+div[summation] > div[of]{
+    width:auto;
+    display:inline-block;
+    height:25%;
+    margin-top:1.5em;
+    padding-left:3px;
+    box-sizing: border-box;
+    font-style: italic;
+    font-size:1.5em;
+}
+
+
+
 div[add]{
     display:inline-block;
 }
@@ -191,4 +241,46 @@ div[multiply]::before{
     font-style: normal;
     content: '\00D7';
     float:left;
+}
+
+div[equation] > div[add]{
+    width:auto;
+    display:inline-block;
+    height:30%;
+    top:35%;
+    margin-bottom:40%;
+    padding-left:3px;
+    float:left;
+    box-sizing: border-box;
+    position:relative;
+    font-style: italic;
+    font-size:1.5em;
+}
+
+div[equation] > div[subtract]{
+    width:auto;
+    display:inline-block;
+    height:30%;
+    top:35%;
+    margin-bottom:40%;
+    padding-left:3px;
+    float:left;
+    box-sizing: border-box;
+    position:relative;
+    font-style: italic;
+    font-size:1.5em;
+}
+
+div[equation] > div[multiply]{
+    width:auto;
+    display:inline-block;
+    height:30%;
+    top:35%;
+    margin-bottom:40%;
+    padding-left:3px;
+    float:left;
+    box-sizing: border-box;
+    position:relative;
+    font-style: italic;
+    font-size:1.5em;
 }
