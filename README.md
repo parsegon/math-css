@@ -3,21 +3,21 @@
 Verbose and Easy way to represent calculus by a few lines of HTML without having to use a Javascript CDN.
 
 What's Calculus-CSS good for?
-    - quick depictions of integrals, summations, products, and alike. 
-    - need a fast loading time on a static page. 
+* quick depictions of integrals, summations, products, and alike. 
+* need a fast loading time on a static page. 
 
 What isn't Calculus CSS made for?
-    - While an all CSS solution is nice, there are limits.  Calculus CSS will not be able to scale as easily. 
+* While an all CSS solution is nice, there are limits.  Calculus CSS will not be able to scale as easily. 
 
 How do I use it? 
 
 First, add the css file to your repository: 
-```
+```HTML
 <link href="path/to/calculus.css" rel="stylesheet" type="text/css">
 ```
 
 And get started!  Documentation is easy as provided below.  Simply, add an equation attribute to begin as follows:
-```
+```HTML
 <div equation>
    <!-- Your equation will go here -->
 </div>
@@ -25,7 +25,7 @@ And get started!  Documentation is easy as provided below.  Simply, add an equat
 
 You can then easily add an integral like such:
 
-```
+```HTML
 <div equation>
     <div integral>
 
@@ -34,7 +34,7 @@ You can then easily add an integral like such:
 ```
 
 To specify bounds and input, simply use ```upperbound```, ```lowerbound```, and ```of``` attributes: 
-```
+```HTML
 <div integral>
     <div upperbound>
         5x
@@ -49,7 +49,7 @@ To specify bounds and input, simply use ```upperbound```, ```lowerbound```, and 
 ```
 
 If you want to add exponents, use the default ```<sup></sup>``` tags:
-```
+```HTML
 <div integral>
     <div upperbound>
         5x<sup>2</sup>
@@ -75,7 +75,7 @@ If you need to add, subtract, multiply, or divide two terms in a sequence, use `
 Note these attributes will only display functionally within the general equation tag and not within a integrals for spacing reasons.
 Example shown below.
 
-```
+```HTML
 <div equation>
     <div integral>
         <div upperbound>
