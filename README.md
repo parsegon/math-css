@@ -1,9 +1,10 @@
 # calculus-css
 
 Verbose and Easy way to represent basic calculus by a few lines of HTML without having to use a heavier Javascript library.  Current Versions works but still Work in Progress.  Support soon to be added for 
-*derivatives 
-*vectors 
-*two line fractions
+
+*derivatives.
+*vectors.
+*two line fractions.
 
 
 ![Render Example](/example/render.png)
