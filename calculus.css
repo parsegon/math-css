@@ -4,17 +4,22 @@ body{
 }
 
 * {
-   border: 1px #ddd solid; 
+/*   border: 1px #ddd solid; */
 }
 
 div[equation]{
     width:100%;
     height: 100px;
     display:inline-block;
+    text-align:center;
+}
+
+div[equation] sup{
+    font-size:.4em;
 }
 
 
-div[integral], div[doubleintegral]{
+div[integral], div[doubleintegral], div[tripleintegral]{
     width:auto;
     display:inline-block;
     margin-right:3px;
@@ -48,7 +53,7 @@ div[integral] > div[lowerbound]{
     width:auto;
     position:absolute;
     bottom:0px;
-    padding-left:40px;
+    padding-left:30px;
     font-style: italic;
     font-size:1em;
 }
@@ -103,13 +108,51 @@ div[doubleintegral] > div[lowerbound]{
     width:auto;
     position:absolute;
     bottom:0px;
-    padding-left:62px;
+    padding-left:52px;
     font-style: italic;
     font-size:1em;
 }
 
 
 div[doubleintegral] > div[of]{
+    width:auto;
+    display:inline-block;
+    height:25%;
+    margin-top:1.5em;
+    padding-left:18px;
+    box-sizing: border-box;
+    font-style: italic;
+    font-size:1.5em;
+}
+
+div[tripleintegral]::before{
+    content: "\222b \222b \222b";
+    font-size:5em;
+    float:left;
+}
+
+div[tripleintegral] > div[upperbound]{
+    height:25%;
+    width:auto;
+    position:absolute;
+    top:8px;
+    padding-left:86px;
+    font-size:1em;
+    font-style: italic;
+}
+
+div[tripleintegral] > div[lowerbound]{
+    height:25%;
+    width:auto;
+    position:absolute;
+    bottom:0px;
+    padding-left:76px;
+    font-style: italic;
+    font-size:1em;
+}
+
+
+div[tripleintegral] > div[of]{
     width:auto;
     display:inline-block;
     height:25%;
