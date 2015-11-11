@@ -1,0 +1,29 @@
+body{
+    margin: 0px;
+    padding:0px;   
+}
+
+* {
+   border: 1px #ddd solid; 
+}
+
+div[equation]{
+    width:100%;
+    height: 100px;
+}
+
+
+div[integral]{
+    width:auto;
+    display:inline-block;
+    margin-right:3px;
+    margin-left:3px;
+    padding-left:9px;
+    box-sizing: border-box;
+    height: 100%;
+}
+
+div[integral]::before{
+    content: "\222b";
+    font-size:5em;
+}
