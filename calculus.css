@@ -21,7 +21,7 @@ div[equation] sup{
 }
 
 
-div[integral], div[doubleintegral], div[tripleintegral], div[summation]{
+div[integral], div[doubleintegral], div[tripleintegral], div[summation] {
     width:auto;
     display:inline-block;
     margin-right:9px;
@@ -212,6 +212,62 @@ div[summation] > div[of]{
 }
 
 
+div[product]{
+    width:auto;
+    display:inline-block;
+    margin-right:9px;
+    margin-left:-4px;
+    padding-left:9px;
+    box-sizing: border-box;
+    height: 100%;
+    position:relative;
+    float:left;
+}
+
+
+div[product]::before{
+    content: "\03A0 ";
+    font-size:5em;
+    padding-top:5px;
+    float:left;
+}
+
+
+div[product] > div[upperbound]{
+    height:25%;
+    width:auto;
+    position:absolute;
+    top:4px;
+    font-size:1em;
+    font-style: italic;
+    width:65px;
+
+}
+
+div[product] > div[lowerbound]{
+    height:25%;
+    width:auto;
+    width:65px;
+    position:absolute;
+    bottom:-5px;
+    font-style: italic;
+    font-size:1em;
+}
+
+
+
+div[product] > div[of]{
+    width:auto;
+    display:inline-block;
+    height:25%;
+    margin-top:1.5em;
+    padding-left:3px;
+    box-sizing: border-box;
+    font-style: italic;
+    font-size:1.5em;
+}
+
+
 
 div[add]{
     display:inline-block;
@@ -222,6 +278,10 @@ div[subtract]{
 }
 
 div[multiply]{
+    display:inline-block;
+}
+
+div[divide]{
     display:inline-block;
 }
 
@@ -242,6 +302,14 @@ div[multiply]::before{
     content: '\00D7';
     float:left;
 }
+
+
+div[divide]::before{
+    font-style: normal;
+    content: '\00F7';
+    float:left;
+}
+
 
 div[equation] > div[add]{
     width:auto;
@@ -272,6 +340,20 @@ div[equation] > div[subtract]{
 }
 
 div[equation] > div[multiply]{
+    width:auto;
+    display:inline-block;
+    height:30%;
+    top:35%;
+    margin-bottom:40%;
+    padding-left:3px;
+    float:left;
+    box-sizing: border-box;
+    position:relative;
+    font-style: italic;
+    font-size:1.5em;
+}
+
+div[equation] > div[divide]{
     width:auto;
     display:inline-block;
     height:30%;
