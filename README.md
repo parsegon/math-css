@@ -3,7 +3,6 @@
 Verbose and Easy way to represent basic calculus by a few lines of HTML without having to use a heavier Javascript library.
 
 ![Render Example](/example/render.png)
-Format: ![Alt Text](/example/render.png)
 
 What's Calculus-CSS good for?
 * quick depictions of integrals, summations, products, and alike. 
