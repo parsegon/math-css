@@ -2,6 +2,9 @@
 
 Verbose and Easy way to represent basic calculus by a few lines of HTML without having to use a heavier Javascript library.
 
+![Render Example](/example/render.png)
+Format: ![Alt Text](/example/render.png)
+
 What's Calculus-CSS good for?
 * quick depictions of integrals, summations, products, and alike. 
 * need a fast loading time on a static page. 
@@ -76,9 +79,6 @@ Note these attributes will only display functionally within the general equation
 Example shown below.
 
 ```HTML
-
-
-
 <div equation>
     <div integral>
         <div upperbound>
@@ -109,74 +109,4 @@ Example shown below.
 ```
 
 
-<div equation>
-            <div integral>
-                <div upperbound>
-                    5x<sup>2</sup>
-                </div>
-                <div lowerbound>
-                    39x
-                </div>
-                <div of>
-                    35x + 45
-                </div>
-            </div>
-            
-            <div add></div>
-            
-           <div doubleintegral>
-                <div upperbound>
-                    5y
-                </div>
-                <div lowerbound>
-                    3y
-                </div>
-                <div of>
-                    35y<sup>78</sup> + 45
-                </div>
-            </div>
-            
-            <div multiply></div>
-            
-            <div tripleintegral>
-                <div upperbound>
-                    5x
-                </div>
-                <div lowerbound>
-                    39x
-                </div>
-                <div of>
-                    35x + 45
-                </div>
-            </div>
-            
-            <div subtract></div>
 
-            
-            <div summation>
-                <div upperbound>
-                    5x
-                </div>
-                <div lowerbound>
-                    39x
-                </div>
-                <div of>
-                    35x + 45
-                </div>
-            </div>
-            
-            <div divide></div>
-            
-            <div product>
-                <div upperbound>
-                    5x
-                </div>
-                <div lowerbound>
-                    39x
-                </div>
-                <div of>
-                    35x + 45
-                </div>
-            </div>
-        </div>
-        
