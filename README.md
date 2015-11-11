@@ -76,6 +76,9 @@ Note these attributes will only display functionally within the general equation
 Example shown below.
 
 ```HTML
+
+
+
 <div equation>
     <div integral>
         <div upperbound>
@@ -106,4 +109,74 @@ Example shown below.
 ```
 
 
+<div equation>
+            <div integral>
+                <div upperbound>
+                    5x<sup>2</sup>
+                </div>
+                <div lowerbound>
+                    39x
+                </div>
+                <div of>
+                    35x + 45
+                </div>
+            </div>
+            
+            <div add></div>
+            
+           <div doubleintegral>
+                <div upperbound>
+                    5y
+                </div>
+                <div lowerbound>
+                    3y
+                </div>
+                <div of>
+                    35y<sup>78</sup> + 45
+                </div>
+            </div>
+            
+            <div multiply></div>
+            
+            <div tripleintegral>
+                <div upperbound>
+                    5x
+                </div>
+                <div lowerbound>
+                    39x
+                </div>
+                <div of>
+                    35x + 45
+                </div>
+            </div>
+            
+            <div subtract></div>
 
+            
+            <div summation>
+                <div upperbound>
+                    5x
+                </div>
+                <div lowerbound>
+                    39x
+                </div>
+                <div of>
+                    35x + 45
+                </div>
+            </div>
+            
+            <div divide></div>
+            
+            <div product>
+                <div upperbound>
+                    5x
+                </div>
+                <div lowerbound>
+                    39x
+                </div>
+                <div of>
+                    35x + 45
+                </div>
+            </div>
+        </div>
+        
