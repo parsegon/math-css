@@ -57,10 +57,10 @@ div[integral] > div[lowerbound]{
 div[integral] > div[of]{
     width:auto;
     display:inline-block;
-    padding-top:28%;
-    height:100%;
-    margin-top:0%;
+    height:25px;
+    margin-top:1.5em;
     padding-left:18px;
+    
     box-sizing: border-box;
     font-style: italic;
     font-size:1.5em;
@@ -112,12 +112,40 @@ div[doubleintegral] > div[lowerbound]{
 div[doubleintegral] > div[of]{
     width:auto;
     display:inline-block;
-    padding-top:24%;
-    height:100%;
-    margin-top:0%;
+    height:25%;
+    margin-top:1.5em;
     padding-left:18px;
     box-sizing: border-box;
     font-style: italic;
     font-size:1.5em;
 }
 
+div[add]{
+    display:inline-block;
+}
+
+div[subtract]{
+    display:inline-block;
+}
+
+div[multiply]{
+    display:inline-block;
+}
+
+div[add]::before{
+    font-style: normal;
+    content: '+';
+    float:left;
+}
+
+div[subtract]::before{
+    font-style: normal;
+    content: '-';
+    float:left;
+}
+
+div[multiply]::before{
+    font-style: normal;
+    content: '\00D7';
+    float:left;
+}
