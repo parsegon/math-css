@@ -98,7 +98,7 @@ Since derivatives are technically both a fraction and an operand, they behave li
     35x + 45
 </div>
 ```
-Calculus-CSS also tries to allow users to never have to look up Unicode symbols for common math features. Hence, there is a built in partial derivative function, just exclude the special d's. 
+Calculus-CSS also tries to allow users to never have to look up Unicode symbols for common math features. Hence, there is a built in partial derivative function, just exclude the special d's.  And yup, ```partial derivative``` reads just like English, use two works, not one or a hyphen.
 
 ```HTML
 <div partial derivative>
