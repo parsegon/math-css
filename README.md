@@ -10,6 +10,7 @@ Verbose and Easy way to represent basic calculus by a few lines of HTML without 
 What's Calculus-CSS good for?
 * quick depictions of integrals, summations, products, and alike. 
 * need a fast loading time on a static page.  Calculus CSS uses no JS.  None!
+* Need Zoomable, Responsive design.  Calculus CSS is built like a *c*hoo-*c*hoo-*s* train.
 
 What isn't Calculus CSS made for?
 * While an all CSS solution is nice, there are limits.  Calculus CSS will not be able to scale as easily. 
