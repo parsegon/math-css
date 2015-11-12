@@ -56,7 +56,7 @@ To specify bounds and input, simply use ```upperbound```, ```lowerbound```, and 
 
 
 
-```upperbound```, ```lowerbound```, and ```of``` will only display correctly when inside ```integral```, ```doubleintegral```, ```tripleintegral```, ```product```, ```summation```.
+```upperbound```, ```lowerbound```, and ```of``` will only display correctly when inside ```integral```, ```doubleintegral```, ```tripleintegral```, ```product```, ```summation```.  Since ```upperbound``` and ```lowerbound``` attributes are absolute, the order which you declare them doesn't matter.
 
 
 #Fractions, Derivatives (a special fraction), Partial Derivatives
