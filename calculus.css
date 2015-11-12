@@ -2,14 +2,14 @@
     Math is cool, CSS is cool, use for whatever you like!
     Made by Mathew Pregasen, under Open Source MIT License. 
 */
-
+/*
 body{
     margin: 0px;
     padding:0px;   
 }
-
+*/
 * {
-   border: 1px #ddd solid; */
+  /* border: 1px #ddd solid; */
 }
 
 div[equation]{
@@ -21,7 +21,7 @@ div[equation]{
     min-height: 100px;
     margin-left:auto;
     margin-right:auto;
-    border: 1px #ddd solid;
+   /* border: 1px #ddd solid;*/
     box-sizing: border-box;
 }
 
