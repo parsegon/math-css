@@ -21,9 +21,10 @@ Verbose, Responsive and Easy way to represent basic math and calculus by a few l
 1) Getting Started<br>
 2) Integrals, Products, Summations<br>
 3) Derivatives and Fractions<br>
-4) Some ```<hr>``` injection magic<br>
-5) General Operands<br>
-6) Exponents<br>
+4) Limits<br>
+5) Some ```<hr>``` injection magic<br>
+6) General Operands<br>
+7) Exponents<br>
 
 ##Getting Started
 How do I use it? 
@@ -126,6 +127,24 @@ Math-CSS also tries to allow users to never have to look up Unicode symbols for 
     35x + 45
 </div>
 ```
+
+##Limits
+### Creating limits involves just three parts, the variable ```variable```, what it is approaching ```goingto``` and the term represented by ``of``.  The following code below would render the limit of x approaching infiniti of thirty five x squared plus twelve x plus nine.
+
+```HTML
+<div limit>
+    <div variable>
+        x
+    </div>
+    <div goingto>
+        <hr infiniti>
+    </div>
+    <div of>
+        35x<sup>2</sup> + 12x + 9
+    </div>
+</div>
+```
+
 
 ##HR Magic!
 ### Using HTML's built in ```<hr>``` tag, we can easily add common Math character into our equation without needing messy closing tags.

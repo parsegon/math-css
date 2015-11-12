@@ -42,7 +42,7 @@ div[equation] sup{
 }
 
 
-div[integral], div[doubleintegral], div[tripleintegral], div[summation], div[fraction] {
+div[integral], div[doubleintegral], div[contourintegral], div[surfaceintegral], div[volumeintegral], div[tripleintegral], div[summation], div[fraction], div[contourintegral], div[limit] {
     width:auto;
     display:inline-block;
     margin-right:0px;
@@ -91,6 +91,50 @@ div[integral] > div[of]{
     margin-top:1.5em;
     padding-left:18px;
     
+    box-sizing: border-box;
+    font-style: italic;
+    font-size:1.5em;
+}
+
+
+div[contourintegral]::before{
+    content: "\222E";
+    font-size:5em;
+    margin-top:-8px;
+    float:left;
+}
+
+
+
+
+div[contourintegral] > div[upperbound]{
+    height:25%;
+    width:auto;
+    position:absolute;
+    top:8px;
+    padding-left:47px;
+    font-size:1em;
+    font-style: italic;
+}
+
+div[contourintegral] > div[lowerbound]{
+    height:auto;
+    width:auto;
+    position:absolute;
+    top:65px;
+    padding-left:30px;
+    font-style: italic;
+    font-size:1em;
+}
+
+
+
+div[contourintegral] > div[of]{
+    width:auto;
+    display:inline-block;
+    height:25px;
+    margin-top:1.5em;
+    padding-left:0px;
     box-sizing: border-box;
     font-style: italic;
     font-size:1.5em;
@@ -150,6 +194,89 @@ div[doubleintegral] > div[of]{
     font-size:1.5em;
 }
 
+
+div[surfaceintegral]::before{
+    content: "\222F";
+    font-size:5em;
+    float:left;
+    margin-top:-8px;
+
+}
+
+div[surfaceintegral] > div[upperbound]{
+    height:25%;
+    width:auto;
+    position:absolute;
+    top:3px;
+    padding-left:72px;
+    font-size:1em;
+    font-style: italic;
+}
+
+div[surfaceintegral] > div[lowerbound]{
+    height:auto;
+    width:auto;
+    position:absolute;
+    top:65px;
+    padding-left:50px;
+    font-style: italic;
+    font-size:1em;
+}
+
+
+div[surfaceintegral] > div[of]{
+    width:auto;
+    display:inline-block;
+    height:25%;
+    margin-top:1.5em;
+    padding-left:0px;
+    box-sizing: border-box;
+    font-style: italic;
+    font-size:1.5em;
+}
+
+div[volumeintegral]::before{
+    content: "\2230";
+    font-size:5em;
+    float:left;
+    margin-top:-8px;
+
+}
+
+div[volumeintegral] > div[upperbound]{
+    height:25%;
+    width:auto;
+    position:absolute;
+    top:3px;
+    padding-left:92px;
+    font-size:1em;
+    font-style: italic;
+}
+
+div[volumeintegral] > div[lowerbound]{
+    height:auto;
+    width:auto;
+    position:absolute;
+    top:65px;
+    padding-left:75px;
+    font-style: italic;
+    font-size:1em;
+}
+
+
+div[volumeintegral] > div[of]{
+    width:auto;
+    display:inline-block;
+    height:25%;
+    margin-top:1.5em;
+    padding-left:0px;
+    box-sizing: border-box;
+    font-style: italic;
+    font-size:1.5em;
+}
+
+
+
 div[tripleintegral]::before{
     content: "\222b \222b \222b";
     font-size:5em;
@@ -186,6 +313,57 @@ div[tripleintegral] > div[of]{
     box-sizing: border-box;
     font-style: italic;
     font-size:1.5em;
+}
+
+
+
+div[limit]::before{
+    content: "lim";
+    font-size:2em;
+    float:left;
+    margin-top:25px;
+
+}
+
+div[limit] > div[variable]{
+    height:25%;
+    width:auto;
+    position:absolute;
+    top:53px;
+    padding-left:2px;
+    font-size:1em;
+    font-style: italic;
+}
+
+div[limit] > div[variable]::after{
+    content: "\2192";
+    margin-left: -4px;
+    
+    
+}
+
+div[limit] > div[goingto]{
+    height:25%;
+    text-align:right;
+    width:40px;
+    position:absolute;
+    top:53px;
+    padding-left:22px;
+    font-size:1em;
+    font-style: italic;
+}
+
+
+div[limit] > div[of]{
+    width:auto;
+    display:inline-block;
+    height:25%;
+    margin-top:1.5em;
+    padding-left:0px;
+    box-sizing: border-box;
+    font-style: italic;
+    font-size:1.5em;
+    margin-left:5px;
 }
 
 
