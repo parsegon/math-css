@@ -1,8 +1,9 @@
 # math-css
 
-Verbose, Responsive and Easy way to represent basic math and calculus by a few lines of HTML without having to use a heavier Javascript library. Built exclusively in CSS using a block-chain technique.   Support soon to be added for 
-* vectors.
-* square root structure.
+Verbose, Responsive and easy way to represent basic math and calculus by a few lines of HTML without having to use a heavier JavaScript library. Built exclusively in CSS using a block-chain technique. Support soon to be added for 
+
+* Character decorators (such as vectors)
+* Display-line containers (such as \sqrt, \frac, etc)
 
 
 ![Render Example](/example/render4.png)
