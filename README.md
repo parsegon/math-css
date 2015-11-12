@@ -21,7 +21,7 @@ Verbose, Responsive and Easy way to represent basic calculus by a few lines of H
 *Getting Started
 *Integrals, Products, Summations
 *Derivatives and Fractions
-*Some <hr> injection magic
+*Some ```<hr>``` injection magic
 *General Operands
 *Exponents
 
@@ -131,7 +131,7 @@ Calculus-CSS also tries to allow users to never have to look up Unicode symbols 
 ### Using HTML's built in ```<hr>``` tag, we can easily add common Math character into our equation without needing messy closing tags.
 
 For example, if you want to show the integral from the upperbound of infiniti to the lower bound of 2 pi, of 35x + 45, simply:
-```
+```HTML
 <div integral>
     <div upperbound>
         <hr infiniti>
@@ -145,11 +145,22 @@ For example, if you want to show the integral from the upperbound of infiniti to
 </div>
 ```
 
+The above code renders: 
+
+![Render Example](/example/render3.png)
+
+
 The tags ```<hr pi>``` and ```<hr infiniti>``` will automatically show. The available subclasses range from greek commons, discrete
-math symbols, and common figures.  See the full list below. 
+math symbols, and common figures.  See the full list below.  Just use ```<hr [KEYWORD]>``` to use.  No ```</hr>``` necessary.  
 
 **Operand and Values**
+```partial```, ```plusorminus```, ```infiniti```, ```approx```, ```unequals```, ```lessthanorequalto```, ```greaterthanorequalto```
 
+**Discrete Math**
+```forall```, ```thereexists```, ```theredoesnotexist```, ```elementof```, ```notanelementof```, ```and```, ```or```, ```intersection```, ```union```, ```congruent```, ```subsetleft```, ```subsetright```, ```notsubsetleft```, ```notsubsetright```, ```subsetorequaltoright```, ```subsetorequaltoleft```, ```notsubsetorequaltoleft```, ```notsubsetorequaltoright```
+
+**Greek Letters**
+```pi```, ```alpha```, ```beta```, ```lambda```, ```delta``` (more coming soon)
 
 ##General Operands
 If you need to add, subtract, multiply, or divide two terms in a sequence, use ```add```, ```subtract```, ```multiply```, ```divide```.
