@@ -7,7 +7,7 @@ Verbose and Easy way to represent basic calculus by a few lines of HTML without 
 * two line fractions.
 
 
-![Render Example](/example/render.png)
+![Render Example](/example/render2.png)
 
 What's Calculus-CSS good for?
 * quick depictions of integrals, summations, products, and alike. 
