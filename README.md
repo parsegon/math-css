@@ -18,12 +18,12 @@ Verbose, Responsive and Easy way to represent basic calculus by a few lines of H
 * While an all CSS solution is nice, there are limits.  Calculus CSS will not be able to scale as easily. If you need users to interact with your math, I highly recommend a Javascript engine like MathJax (https://www.mathjax.org/).
 
 ##Table of Contents
-1) Getting Started
-2) Integrals, Products, Summations
-3) Derivatives and Fractions
-4) Some ```<hr>``` injection magic
-5) General Operands
-6) Exponents
+1) Getting Started<br>
+2) Integrals, Products, Summations<br>
+3) Derivatives and Fractions<br>
+4) Some ```<hr>``` injection magic<br>
+5) General Operands<br>
+6) Exponents<br>
 
 ##Getting Started
 How do I use it? 
