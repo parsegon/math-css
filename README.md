@@ -233,4 +233,4 @@ If you want to add exponents, use the default ```<sup></sup>``` tags:
 </div>
 ```
 
-Free to Use, MIT License, Open Source.
+Free to Use, MIT License, Open Source.  Want to add something?  Feel free to fork or email me at mathexl@gmail.com.
