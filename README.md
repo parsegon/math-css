@@ -1,8 +1,9 @@
 # calculus-css
 
-Verbose, Responsive and Easy way to represent basic calculus by a few lines of HTML without having to use a heavier Javascript library. Built exclusively in CSS using a block-chain technique.  Current Versions work but still Work in Progress.  Support soon to be added for 
+Verbose, Responsive and Easy way to represent basic calculus by a few lines of HTML without having to use a heavier Javascript library. Built exclusively in CSS using a block-chain technique.   Support soon to be added for 
 * vectors.
 * circular integrals, circular doubleintegrals etc.
+* square root structure.
 
 
 ![Render Example](/example/render2.png)
@@ -11,10 +12,20 @@ Verbose, Responsive and Easy way to represent basic calculus by a few lines of H
 * quick depictions of integrals, summations, products, and alike. 
 * need a fast loading time on a static page.  Calculus CSS uses no JS.  None!
 * Need Zoomable, Responsive design.  Calculus CSS is built like a **c**hoo-**c**hoo-**s** train.
+* Want to use special math symbols but no time for Unicode.
 
 **What isn't Calculus CSS made for?**
 * While an all CSS solution is nice, there are limits.  Calculus CSS will not be able to scale as easily. If you need users to interact with your math, I highly recommend a Javascript engine like MathJax (https://www.mathjax.org/).
 
+##Table of Contents
+*Getting Started
+*Integrals, Products, Summations
+*Derivatives and Fractions
+*Some <hr> injection magic
+*General Operands
+*Exponents
+
+##Getting Started
 How do I use it? 
 
 First, add the css file to your repository: 
@@ -29,7 +40,7 @@ And get started!  Documentation is easy as provided below.  Simply, add an equat
 </div>
 ```
 
-#Integrals, Products, Summations
+##Integrals, Products, Summations
 ###The goal of Calculus-CSS is so that your HTML reads like Math.  You can then easily add ```integral```, ```doubleintegral```, ```tripleintegral```, ```product```, ```summation``` like such:
 
 ```HTML
@@ -60,7 +71,7 @@ To specify bounds and input, simply use ```upperbound```, ```lowerbound```, and 
 ```upperbound```, ```lowerbound```, and ```of``` will only display correctly when inside ```integral```, ```doubleintegral```, ```tripleintegral```, ```product```, ```summation```.  Since ```upperbound``` and ```lowerbound``` attributes are absolute, the order which you declare them doesn't matter.
 
 
-#Fractions, Derivatives (a special fraction), Partial Derivatives
+##Fractions, Derivatives (a special fraction), Partial Derivatives
 ###Calculus CSS has built in support for ```fraction```, ```derivative``` (short fraction), and ```partial derivative```.  
 
 ```HTML
@@ -115,7 +126,32 @@ Calculus-CSS also tries to allow users to never have to look up Unicode symbols 
     35x + 45
 </div>
 ```
-#General Operands
+
+##HR Magic!
+### Using HTML's built in ```<hr>``` tag, we can easily add common Math character into our equation without needing messy closing tags.
+
+For example, if you want to show the integral from the upperbound of infiniti to the lower bound of 2 pi, of 35x + 45, simply:
+```
+<div integral>
+    <div upperbound>
+        <hr infiniti>
+    </div>
+    <div lowerbound>
+        2<hr pi> + 6
+    </div>
+    <div of>
+        35x + 45<hr pi>
+    </div>
+</div>
+```
+
+The tags ```<hr pi>``` and ```<hr infiniti>``` will automatically show. The available subclasses range from greek commons, discrete
+math symbols, and common figures.  See the full list below. 
+
+**Operand and Values**
+
+
+##General Operands
 If you need to add, subtract, multiply, or divide two terms in a sequence, use ```add```, ```subtract```, ```multiply```, ```divide```.
 Note these attributes will only display functionally within the general equation tag and not within a integrals for spacing reasons.
 Example shown below.
@@ -149,6 +185,8 @@ Example shown below.
     </div>
 </div>
 ```
+
+##Exponents
 
 If you want to add exponents, use the default ```<sup></sup>``` tags:
 ```HTML

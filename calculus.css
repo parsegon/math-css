@@ -402,6 +402,65 @@ div[divide]{
     display:inline-block;
 }
 
+
+div[equation] > hr[multiply]{
+    width:auto;
+    display:inline-block;
+    height:100px;
+    padding-left:3px;
+    margin-top:0px;
+    padding-top:35px;
+    box-sizing: border-box;
+    position:relative;
+    font-style: italic;
+    font-size:1.5em;
+    clear:none;
+    border-style:none;
+    border-width:0px;
+    -webkit-margin-before: 0em;
+    -webkit-margin-after: 0em;
+    -webkit-margin-start: 0;
+    -webkit-margin-end:0;
+    
+    
+}
+
+
+hr[divide]{
+    display:inline-block;
+}
+
+hr[divide]::before{
+    font-style: normal;
+    content: '\00F7';
+    float:left;
+}
+
+div[equation] > hr[divide]{
+    width:auto;
+    display:inline-block;
+    height:100px;
+    padding-left:3px;
+    margin-top:0px;
+    padding-top:35px;
+    box-sizing: border-box;
+    position:relative;
+    font-style: italic;
+    font-size:1.5em;
+    clear:none;
+    border-style:none;
+    border-width:0px;
+    -webkit-margin-before: 0em;
+    -webkit-margin-after: 0em;
+    -webkit-margin-start: 0;
+    -webkit-margin-end:0;
+    
+    
+}
+
+
+
+
 div[add]::before{
     font-style: normal;
     content: '+';
@@ -491,5 +550,280 @@ div[equation] > div[term]{
     font-style: italic;
     font-size:1.5em;
 }
+
+
+/* HR DECLARATIVES */
+div[equation] hr {
+    clear:none;
+    border-style:none;
+    border-width:0px;
+    -webkit-margin-before: 0em;
+    -webkit-margin-after: 0em;
+    -webkit-margin-start: 0;
+    -webkit-margin-end:0;
+}
+
+/* remove usual <hr> attributes */
+
+div[equation] hr[partial]::before{
+    font-style: normal;
+    content: '\2202';
+}
+
+div[equation] hr[plusorminus]::before{
+    font-style: normal;
+    content: '\2213';
+}
+
+div[equation] hr[infiniti] {
+    float: none !important;
+    display: inline-block !important;
+    -webkit-margin-after: -6px !important;
+    -webkit-margin-before: 2px !important;
+}
+
+div[equation] hr[infiniti]::before{
+    font-style: normal;
+    content: '\221e';
+}
+
+div[equation] hr[approx]::before{
+    font-style: normal;
+    content: '\2248';
+}
+
+div[equation] hr[unequals]::before{
+    font-style: normal;
+    content: '\2260';
+}
+
+div[equation] hr[lessthanorequalto]::before{
+    font-style: normal;
+    content: '\2264';
+}
+
+div[equation] hr[greaterthanorequalto]::before{
+    font-style: normal;
+    content: '\2265';
+}
+
+
+
+div[equation] hr[forall]::before{
+    font-style: normal;
+    content: '\2200';
+}
+
+div[equation] hr[thereexists]::before{
+    font-style: normal;
+    content: '\2203';
+}
+
+div[equation] hr[theredoesnotexist]::before{
+    font-style: normal;
+    content: '\2204';
+}
+
+
+
+div[equation] hr[elementof]::before{
+    font-style: normal;
+    content: '\2208';
+}
+
+div[equation] hr[notanelementof]::before{
+    font-style: normal;
+    content: '\2209';
+}
+
+
+
+div[equation] hr[and]::before{
+    font-style: normal;
+    content: '\2227';
+}
+
+div[equation] hr[or]::before{
+    font-style: normal;
+    content: '\2228';
+}
+
+div[equation] hr[intersection]::before{
+    font-style: normal;
+    content: '\2229';
+}
+
+div[equation] hr[union]::before{
+    font-style: normal;
+    content: '\222A';
+}
+
+
+
+
+/*Discrete Functionality Below */
+
+div[equation] hr[congruent]::before{
+    font-style: normal;
+    content: '\2261';
+}
+
+
+
+div[equation] hr[subsetleft]::before{
+    font-style: normal;
+    content: '\2282';
+}
+
+div[equation] hr[subsetright]::before{
+    font-style: normal;
+    content: '\2283';
+}
+
+div[equation] hr[notsubsetleft]::before{
+    font-style: normal;
+    content: '\2284';
+}
+
+div[equation] hr[notsubsetright]::before{
+    font-style: normal;
+    content: '\2285';
+}
+
+div[equation] hr[subsetorequaltoleft]::before{
+    font-style: normal;
+    content: '\2286';
+}
+
+div[equation] hr[subsetorequaltoright]::before{
+    font-style: normal;
+    content: '\2287';
+}
+
+div[equation] hr[notsubsetorequaltoleft]::before{
+    font-style: normal;
+    content: '\2288';
+}
+
+div[equation] hr[notsubsetorequaltoright]::before{
+    font-style: normal;
+    content: '\2289';
+}
+
+
+/* Greek Functionality Below*/
+
+div[equation] hr[pi] {
+    float: none !important;
+    display: inline-block !important;
+    -webkit-margin-after: -4px !important;
+}
+
+div[equation] hr[pi]::before{
+    font-style: normal;
+    content: '\03C0';
+
+}
+
+div[equation] hr[alpha]::before{
+    font-style: normal;
+    content: '\03B1';
+}
+
+div[equation] hr[beta]::before{
+    font-style: normal;
+    content: '\03B2';
+}
+
+div[equation] hr[lambda]::before{
+    font-style: normal;
+    content: '\03BB';
+}
+
+div[equation] hr[delta]::before{
+    font-style: normal;
+    content: '\2206';
+}
+
+
+
+
+
+hr[add]{
+    display:inline-block;
+}
+
+hr[add]::before{
+    font-style: normal;
+    content: '+';
+    float:left;
+}
+
+div[equation] > hr[add]{
+    width:auto;
+    display:inline-block;
+    height:100px;
+    padding-left:3px;
+    margin-top:0px;
+    padding-top:35px;
+    box-sizing: border-box;
+    position:relative;
+    font-style: italic;
+    font-size:1.5em;
+    clear:none;
+    border-style:none;
+    border-width:0px;
+    -webkit-margin-before: 0em;
+    -webkit-margin-after: 0em;
+    -webkit-margin-start: 0;
+    -webkit-margin-end:0;
+    
+    
+}
+
+
+hr[subtract]{
+    display:inline-block;
+}
+
+hr[subtract]::before{
+    font-style: normal;
+    content: '-';
+    float:left;
+}
+
+div[equation] > hr[subtract]{
+    width:auto;
+    display:inline-block;
+    height:100px;
+    padding-left:3px;
+    margin-top:0px;
+    padding-top:35px;
+    box-sizing: border-box;
+    position:relative;
+    font-style: italic;
+    font-size:1.5em;
+    clear:none;
+    border-style:none;
+    border-width:0px;
+    -webkit-margin-before: 0em;
+    -webkit-margin-after: 0em;
+    -webkit-margin-start: 0;
+    -webkit-margin-end:0;
+    
+    
+}
+
+
+hr[multiply]{
+    display:inline-block;
+}
+
+hr[multiply]::before{
+    font-style: normal;
+    content: '\00D7';
+    float:left;
+}
+
 
 /* Leibniz Lives */
