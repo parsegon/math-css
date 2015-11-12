@@ -32,6 +32,7 @@ div[equation] *{
 
 div[equation] sup{
     float:none;
+    font-size:.4em;
 }
 
 
