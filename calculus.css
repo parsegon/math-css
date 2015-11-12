@@ -1,10 +1,15 @@
+/*
+    Math is cool, CSS is cool, use for whatever you like!
+    Made by Mathew Pregasen, under Open Source MIT License. 
+*/
+
 body{
     margin: 0px;
     padding:0px;   
 }
 
 * {
-/*   border: 1px #ddd solid; */
+   border: 1px #ddd solid; */
 }
 
 div[equation]{
@@ -28,6 +33,7 @@ div[equation]:after{
 
 div[equation] *{
     float:left;
+    box-sizing: border-box;
 }
 
 div[equation] sup{
@@ -36,11 +42,12 @@ div[equation] sup{
 }
 
 
-div[integral], div[doubleintegral], div[tripleintegral], div[summation] {
+div[integral], div[doubleintegral], div[tripleintegral], div[summation], div[fraction] {
     width:auto;
     display:inline-block;
-    margin-right:9px;
-    margin-left:-4px;
+    margin-right:0px;
+    padding-right:9px;
+    margin-left:0px;
     padding-left:9px;
     box-sizing: border-box;
     height: 100px;
@@ -94,7 +101,7 @@ div[equation] > div[term]{
     display:inline-block;
     height:30%;
     top:35%;
-    margin-bottom:40%;
+    margin-bottom:0%;
     padding-left:3px;
     float:left;
     box-sizing: border-box;
@@ -231,8 +238,8 @@ div[summation] > div[of]{
 div[product]{
     width:auto;
     display:inline-block;
-    margin-right:9px;
-    margin-left:-4px;
+    padding-right:9px;
+    margin-left:0px;
     padding-left:9px;
     box-sizing: border-box;
     height: 100px;
@@ -285,6 +292,98 @@ div[product] > div[of]{
     font-size:1.5em;
 }
 
+
+
+div[fraction]{
+    width:auto;
+    display:inline-block;
+    padding-right:9px;
+    margin-left:0px;
+    padding-left:9px;
+    box-sizing: border-box;
+    height: 100px;
+    position:relative;
+    float:left;
+}
+
+
+div[fraction] > div[top]{
+    height:24px;
+    min-width:100%;
+    position:relative;
+    top:28px;
+    border-bottom:2px #444 solid;
+    font-size:1.3em;
+    font-style: italic;
+    width:65px;
+    padding-bottom:3px;
+    text-align:center;
+
+}
+
+div[fraction] > div[bottom]{
+    height:relative;
+    min-width:100%;
+    position:relative;
+    top:26px;
+    border-top:2px #444 solid;
+    font-style: italic;
+    font-size:1.3em;
+    text-align:center;
+    
+}
+
+div[derivative]{
+    width:50px;
+    display:inline-block;
+    padding-right:9px;
+    margin-left:0px;
+    padding-left:9px;
+    box-sizing: border-box;
+    height: 100px;
+    position:relative;
+    float:left;
+}
+
+
+div[derivative] > div[top]{
+    height:24px;
+    min-width:100%;
+    position:relative;
+    top:28px;
+    border-bottom:2px #444 solid;
+    font-size:1.3em;
+    font-style: italic;
+    padding-bottom:3px;
+    text-align:center;
+
+}
+
+
+
+div[derivative] > div[bottom]{
+    height:relative;
+    min-width:100%;
+    position:relative;
+    top:26px;
+    border-top:2px #444 solid;
+    font-style: italic;
+    font-size:1.3em;
+    text-align:center;
+    
+}
+
+
+
+div[partial] > div[top]::before{
+    content: "\2202";
+    margin-right:-5px;
+}
+
+div[partial] > div[bottom]::before{
+    content: "\2202";
+    margin-right:-5px;
+}
 
 
 div[add]{
@@ -374,6 +473,18 @@ div[equation] > div[divide]{
     height:100px;
     padding-left:3px;
     margin-top:0px;
+    padding-top:35px;
+    box-sizing: border-box;
+    position:relative;
+    font-style: italic;
+    font-size:1.5em;
+}
+
+div[equation] > div[term]{
+    width:auto;
+    display:inline-block;
+    height:100px;
+    padding-left:3px;
     padding-top:35px;
     box-sizing: border-box;
     position:relative;
