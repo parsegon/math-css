@@ -1,6 +1,6 @@
 # calculus-css
 
-Verbose and Easy way to represent basic calculus by a few lines of HTML without having to use a heavier Javascript library.  Current Versions works but still Work in Progress.  Support soon to be added for 
+Verbose and Easy way to represent basic calculus by a few lines of HTML without having to use a heavier Javascript library.  Current Versions work but still Work in Progress.  Support soon to be added for 
 * vectors.
 * circular integrals, circular doubleintegrals etc.
 
