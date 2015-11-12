@@ -2,7 +2,6 @@
 
 Verbose, Responsive and Easy way to represent basic math and calculus by a few lines of HTML without having to use a heavier Javascript library. Built exclusively in CSS using a block-chain technique.   Support soon to be added for 
 * vectors.
-* circular integrals, circular doubleintegrals etc.
 * square root structure.
 
 
