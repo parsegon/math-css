@@ -164,7 +164,5 @@ If you want to add exponents, use the default ```<sup></sup>``` tags:
     </div>
 </div>
 ```
-```
 
-
-
+Free to Use, MIT License, Open Source.
