@@ -1,6 +1,6 @@
-# calculus-css
+# math-css
 
-Verbose, Responsive and Easy way to represent basic calculus by a few lines of HTML without having to use a heavier Javascript library. Built exclusively in CSS using a block-chain technique.   Support soon to be added for 
+Verbose, Responsive and Easy way to represent basic math and calculus by a few lines of HTML without having to use a heavier Javascript library. Built exclusively in CSS using a block-chain technique.   Support soon to be added for 
 * vectors.
 * circular integrals, circular doubleintegrals etc.
 * square root structure.
@@ -8,14 +8,14 @@ Verbose, Responsive and Easy way to represent basic calculus by a few lines of H
 
 ![Render Example](/example/render2.png)
 
-**What's Calculus-CSS good for?**
+**What's Math-CSS good for?**
 * quick depictions of integrals, summations, products, and alike. 
-* need a fast loading time on a static page.  Calculus CSS uses no JS.  None!
-* Need Zoomable, Responsive design.  Calculus CSS is built like a **c**hoo-**c**hoo-**s** train.
+* need a fast loading time on a static page.  Math CSS uses no JS.  None!
+* Need Zoomable, Responsive design.  Math CSS is built like a **c**hoo-**c**hoo-**s** train.
 * Want to use special math symbols but no time for Unicode.
 
-**What isn't Calculus CSS made for?**
-* While an all CSS solution is nice, there are limits.  Calculus CSS will not be able to scale as easily. If you need users to interact with your math, I highly recommend a Javascript engine like MathJax (https://www.mathjax.org/).
+**What isn't Math CSS made for?**
+* While an all CSS solution is nice, there are limits.  Math CSS will not be able to scale as easily. If you need users to interact with your math, I highly recommend a Javascript engine like MathJax (https://www.mathjax.org/).
 
 ##Table of Contents
 1) Getting Started<br>
@@ -30,7 +30,7 @@ How do I use it?
 
 First, add the css file to your repository: 
 ```HTML
-<link href="path/to/calculus.css" rel="stylesheet" type="text/css">
+<link href="path/to/math.css" rel="stylesheet" type="text/css">
 ```
 
 And get started!  Documentation is easy as provided below.  Simply, add an equation attribute to begin as follows:
@@ -41,7 +41,7 @@ And get started!  Documentation is easy as provided below.  Simply, add an equat
 ```
 
 ##Integrals, Products, Summations
-###The goal of Calculus-CSS is so that your HTML reads like Math.  You can then easily add ```integral```, ```doubleintegral```, ```tripleintegral```, ```product```, ```summation``` like such:
+###The goal of Math-CSS is so that your HTML reads like Math.  You can then easily add ```integral```, ```doubleintegral```, ```tripleintegral```, ```product```, ```summation``` like such:
 
 ```HTML
 <div equation>
@@ -72,7 +72,7 @@ To specify bounds and input, simply use ```upperbound```, ```lowerbound```, and 
 
 
 ##Fractions, Derivatives (a special fraction), Partial Derivatives
-###Calculus CSS has built in support for ```fraction```, ```derivative``` (short fraction), and ```partial derivative```.  
+###Math CSS has built in support for ```fraction```, ```derivative``` (short fraction), and ```partial derivative```.  
 
 ```HTML
 <div equation>
@@ -94,7 +94,7 @@ To specify top and bottom, simply use ```top```  and ```bottom``` attributes:
 </div>
 ```
 
-Since derivatives are technically both a fraction and an operand, they behave like a fraction in Calculus CSS.  For the term that is being derived, just follow the derivative with a ```term``` tag.  Example below:
+Since derivatives are technically both a fraction and an operand, they behave like a fraction in Math CSS.  For the term that is being derived, just follow the derivative with a ```term``` tag.  Example below:
 
 ```HTML
 <div  derivative>
@@ -110,7 +110,7 @@ Since derivatives are technically both a fraction and an operand, they behave li
     35x + 45
 </div>
 ```
-Calculus-CSS also tries to allow users to never have to look up Unicode symbols for common math features. Hence, there is a built in partial derivative function, just exclude the special d's.  And yup, ```partial derivative``` reads just like English, use two works, not one or a hyphen.
+Math-CSS also tries to allow users to never have to look up Unicode symbols for common math features. Hence, there is a built in partial derivative function, just exclude the special d's.  And yup, ```partial derivative``` reads just like English, use two works, not one or a hyphen.
 
 ```HTML
 <div partial derivative>
