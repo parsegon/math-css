@@ -6,7 +6,7 @@ Verbose, Responsive and Easy way to represent basic math and calculus by a few l
 * square root structure.
 
 
-![Render Example](/example/render2.png)
+![Render Example](/example/render4.png)
 
 **What's Math-CSS good for?**
 * quick depictions of integrals, summations, products, and alike. 
