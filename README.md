@@ -29,7 +29,7 @@ And get started!  Documentation is easy as provided below.  Simply, add an equat
 ```
 
 #Integrals, Products, Summations
-##The goal of Calculus-CSS is so that your HTML reads like Math.  You can then easily add ```integral```, ```doubleintegral```, ```tripleintegral```, ```product```, ```summation``` like such:
+###The goal of Calculus-CSS is so that your HTML reads like Math.  You can then easily add ```integral```, ```doubleintegral```, ```tripleintegral```, ```product```, ```summation``` like such:
 
 ```HTML
 <div equation>
@@ -60,7 +60,7 @@ To specify bounds and input, simply use ```upperbound```, ```lowerbound```, and 
 
 
 #Fractions, Derivatives (a special fraction), Partial Derivatives
-##Calculus CSS has built in support for ```fraction```, ```derivative``` (short fraction), and ```partial derivative```.  
+###Calculus CSS has built in support for ```fraction```, ```derivative``` (short fraction), and ```partial derivative```.  
 
 ```HTML
 <div equation>
