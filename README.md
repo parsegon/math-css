@@ -5,7 +5,7 @@ A verbose, responsive, and easy way to represent basic math and calculus by a fe
 Support soon to be added for :
 
 * Character decorators (such as vectors)
-* Display-line containers (such as \sqrt, \frac, etc)
+* Display-line containers (such as `\sqrt`, `\frac`, etc)
 
 ![Render Example](/example/render4.png)
 
@@ -16,7 +16,7 @@ Support soon to be added for :
 * Special math symbols without looking up the unicode.
 
 **What isn't Math CSS made for?**
-* While an all-CSS solution is nice, there are limits. MathCSS will not be able to scale as easily. If you need users to interact with your math, I highly recommend a Javascript engine like MathJax (https://www.mathjax.org/).
+* While an all-CSS solution is nice, there are limits. MathCSS will not be able to scale as easily. If you need users to interact with your math, I highly recommend a Javascript engine like [MathJax](https://www.mathjax.org/).
 
 
 ## Usage
@@ -179,11 +179,11 @@ The tags `<hr pi>` and `<hr infty>` will automatically show. The available subcl
 
 **Operand and Values**:
 
-`partial`, `plusorminus`, `infiniti`, `approx`, `unequals`, `lessthanorequalto`, `greaterthanorequalto`
+`partial`, `pm`, `infty`, `approx`, `neq`, `leq`, `geq`
 
 **Discrete Math**:
 
-`forall`, `thereexists`, `theredoesnotexist`, `elementof`, `notanelementof`, `and`, `or`, `intersection`, `union`, `congruent`, `subsetleft`, `subsetright`, `notsubsetleft`, `notsubsetright`, `subsetorequaltoright`, `subsetorequaltoleft`, `notsubsetorequaltoleft`, `notsubsetorequaltoright`
+`forall`, `exists`, `nexists`, `in`, `notin`, `and`, `or`, `cap`, `cup`, `congruent`, `subsetleft`, `subsetright`, `notsubsetleft`, `notsubsetright`, `subsetorequaltoright`, `subsetorequaltoleft`, `notsubsetorequaltoleft`, `notsubsetorequaltoright`
 
 **Greek Letters**:
 
