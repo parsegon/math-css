@@ -748,19 +748,19 @@ div[equation] hr[partial]::before{
     content: '\2202';
 }
 
-div[equation] hr[plusorminus]::before{
+div[equation] hr[pm]::before{
     font-style: normal;
     content: '\2213';
 }
 
-div[equation] hr[infiniti] {
+div[equation] hr[infty] {
     float: none !important;
     display: inline-block !important;
     -webkit-margin-after: -6px !important;
     -webkit-margin-before: 2px !important;
 }
 
-div[equation] hr[infiniti]::before{
+div[equation] hr[infty]::before{
     font-style: normal;
     content: '\221e';
 }
@@ -770,17 +770,17 @@ div[equation] hr[approx]::before{
     content: '\2248';
 }
 
-div[equation] hr[unequals]::before{
+div[equation] hr[neq]::before{
     font-style: normal;
     content: '\2260';
 }
 
-div[equation] hr[lessthanorequalto]::before{
+div[equation] hr[leq]::before{
     font-style: normal;
     content: '\2264';
 }
 
-div[equation] hr[greaterthanorequalto]::before{
+div[equation] hr[geq]::before{
     font-style: normal;
     content: '\2265';
 }
@@ -792,24 +792,24 @@ div[equation] hr[forall]::before{
     content: '\2200';
 }
 
-div[equation] hr[thereexists]::before{
+div[equation] hr[exists]::before{
     font-style: normal;
     content: '\2203';
 }
 
-div[equation] hr[theredoesnotexist]::before{
+div[equation] hr[nexists]::before{
     font-style: normal;
     content: '\2204';
 }
 
 
 
-div[equation] hr[elementof]::before{
+div[equation] hr[in]::before{
     font-style: normal;
     content: '\2208';
 }
 
-div[equation] hr[notanelementof]::before{
+div[equation] hr[notin]::before{
     font-style: normal;
     content: '\2209';
 }
@@ -826,12 +826,12 @@ div[equation] hr[or]::before{
     content: '\2228';
 }
 
-div[equation] hr[intersection]::before{
+div[equation] hr[cap]::before{
     font-style: normal;
     content: '\2229';
 }
 
-div[equation] hr[union]::before{
+div[equation] hr[cup]::before{
     font-style: normal;
     content: '\222A';
 }
