@@ -7,7 +7,7 @@ Support soon to be added for :
 * Character decorators (such as vectors)
 * Display-line containers (such as `\sqrt`, `\frac`, etc)
 
-![Render Example](/example/render4.png)
+![Render Example](/example/render5.png)
 
 **What's MathCSS good for?**
 * Quick depictions of integrals, summations, products, and alike.
@@ -148,6 +148,22 @@ MathCSS also tries to allow users to never have to look up the unicode for commo
     </div>
 </div>
 ```
+
+### Square Roots and Roots
+
+#### You can add square roots easily using the `root` attribute.  You can also specify the degree of the root with `degree`.  Use `of` for the term. The `degree` tag is optional. 
+
+```HTML
+<div root>
+    <div of>
+        35x + 45y<sup>2</sup> + 23
+    </div>
+    <div degree>
+        4
+    </div>
+</div>
+```
+
 
 
 ### HR Magic!
