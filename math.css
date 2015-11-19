@@ -47,6 +47,10 @@ div[limit] {
     width: auto;
 }
 
+
+
+
+
 div[integral]::before {
     content: '\222b';
     float: left;
@@ -89,6 +93,40 @@ div[contourintegral]::before {
     font-size: 5em;
     margin-top: -8px;
 }
+
+div[squareroot] {
+    display: inline-block;
+    height: 60px;
+    margin-left: 29px;
+    margin-right: 0;
+    padding-left: 0px;
+    padding-right: 9px;
+    position: relative;
+    width: auto;
+    margin-top:30px;
+    padding-top: 10px;
+    
+    border-top:2px black solid;
+}
+
+div[squareroot]::before {
+    content: '\221A';
+    float: left;
+    font-size: 2.5em;
+    margin-top: -10px;
+    margin-left:-25px;
+}
+
+div[squareroot] > div[of] {
+    display: inline-block;
+    font-size: 1.5em;
+    font-style: italic;
+    height: 25px;
+    margin-top: -6px;
+    padding-left: 0;
+    width: auto;
+}
+
 
 div[contourintegral] > div[upperbound] {
     font-size: 1em;
