@@ -94,7 +94,7 @@ div[contourintegral]::before {
     margin-top: -8px;
 }
 
-div[squareroot] {
+div[root] {
     display: inline-block;
     height: 60px;
     margin-left: 29px;
@@ -109,7 +109,7 @@ div[squareroot] {
     border-top:2px black solid;
 }
 
-div[squareroot]::before {
+div[root]::before {
     content: '\221A';
     float: left;
     font-size: 2.5em;
@@ -117,7 +117,7 @@ div[squareroot]::before {
     margin-left:-25px;
 }
 
-div[squareroot] > div[of] {
+div[root] > div[of] {
     display: inline-block;
     font-size: 1.5em;
     font-style: italic;
@@ -127,7 +127,12 @@ div[squareroot] > div[of] {
     width: auto;
 }
 
-
+div[root] > div[degree] {
+    position:absolute;
+    top:6px;
+    left:-17px;
+}    
+    
 div[contourintegral] > div[upperbound] {
     font-size: 1em;
     font-style: italic;
