@@ -461,6 +461,11 @@ div[fraction] {
     width: auto;
 }
 
+div[fraction] sup {
+    float: none;
+    font-size: 0.4em;
+}
+
 div[fraction] > div[top] {
     border-bottom: 2px solid #444;
     font-size: 1.3em;
@@ -471,11 +476,13 @@ div[fraction] > div[top] {
     position: relative;
     text-align: center;
     top: 28px;
-    width: 65px;
+    width: 100%;
+    clear:both;
+        float:none;
+
 }
 
 div[fraction] > div[bottom] {
-    border-top: 2px solid #444;
     font-size: 1.3em;
     font-style: italic;
     height: relative;
@@ -483,7 +490,89 @@ div[fraction] > div[bottom] {
     position: relative;
     text-align: center;
     top: 26px;
+
 }
+
+
+
+div[fraction] > div[top] > div[fraction] {
+    display: inline-block;
+    float: none;
+    height: 40px;
+    margin-left: 0;
+    padding-left: 4px;
+    padding-right: 4px;
+    position: relative;
+    width: auto;
+    margin-top:-11px;
+    top:-20px;
+    display:inline-block;
+}
+
+div[fraction] > div[top] > div[fraction] > div[top] {
+    border-bottom: 0px solid #444;
+    font-size: .5em;
+    font-style: italic;
+    height: 10px;
+    min-width: 100%;
+    padding-bottom: 3px;
+    position: relative;
+    text-align: center;
+    top: 8px;
+}
+
+div[fraction] > div[top] > div[fraction] > div[bottom] {
+    border-top: 1px solid #444;
+    font-size: .5em;
+    font-style: italic;
+    height: relative;
+    min-width: 100%;
+    position: relative;
+    text-align: center;
+    top: 11px;
+}
+
+
+
+div[fraction] > div[bottom] > div[fraction] {
+    float: none;
+    height: 40px;
+    margin-left: 0;
+    padding-left: 4px;
+    padding-right: 4px;
+    position: relative;
+    width: auto;
+    margin-top:-9px;
+    top:-14px;
+    display:inline-block;
+}
+
+div[fraction] > div[bottom] > div[fraction] > div[top] {
+    border-bottom: 0px solid #444;
+    font-size: .5em;
+    font-style: italic;
+    height: 10px;
+    min-width: 100%;
+    padding-bottom: 3px;
+    position: relative;
+    text-align: center;
+    top: 8px;
+}
+
+div[fraction] > div[bottom] > div[fraction] > div[bottom] {
+    border-top: 1px solid #444;
+    font-size: .5em;
+    font-style: italic;
+    height: relative;
+    min-width: 100%;
+    position: relative;
+    text-align: center;
+    top: 11px;
+}
+
+
+
+
 
 div[derivative] {
     display: inline-block;
