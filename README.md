@@ -7,7 +7,7 @@ Support soon to be added for :
 * Character decorators (such as vectors)
 * Display-line containers (such as `\frac`, etc)
 
-![Render Example](/example/render5.png)
+![Render Example](/example/render6.png)
 
 **What's MathCSS good for?**
 * Quick depictions of integrals, summations, products, and alike.
@@ -92,6 +92,60 @@ To specify top and bottom, simply use `top` and `bottom` attributes:
     </div>
     <div bottom>
         39x
+    </div>
+</div>
+```
+
+While MathCSS cannot support infinite fraction's within each other, it can go down a scope of 2.  You can embed a subfraction in 
+a fraction, but not a subfraction in a subfraction in a subfraction due to sizing constraints. For instace, the following code will work:
+
+```HTML
+<div fraction>
+    <div top>
+
+        <div fraction>
+            <div top>
+                35y + 4x
+            </div>
+            <div bottom>
+                12x + 4z
+            </div>  
+        </div>
+
+        + y<sup>2</sup> + 
+
+        <div fraction>
+            <div top>
+                35x + 4y
+            </div>
+            <div bottom>
+                12z + 4
+            </div>  
+        </div>
+
+    </div>
+    <div bottom>
+       
+        <div fraction>
+            <div top>
+                35x + 2x
+            </div>
+            <div bottom>
+                11x + 4
+            </div>  
+        </div>
+
+        + 5 + 
+
+        <div fraction>
+            <div top>
+                35x + 4x
+            </div>
+            <div bottom>
+                12x + 4
+            </div>  
+        </div>
+
     </div>
 </div>
 ```
