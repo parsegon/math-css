@@ -190,7 +190,7 @@ div[contourintegral] > div[of] {
     width: auto;
 }
 
-div[equation] > div[term] {
+div[term] {
     display: inline-block;
     float: left;
     font-size: 1.5em;
@@ -201,6 +201,32 @@ div[equation] > div[term] {
     position: relative;
     top: 35%;
     width: auto;
+}
+
+
+div[vector] {
+    display: inline-block;
+    float: left;
+    font-size: 1.2em !important;;
+    font-style: italic;
+    height: 28% !important;
+    margin-bottom: 10px !important;;
+    padding-left: 3px;
+    position: relative;
+    top: 30% !important;
+    width: auto;
+}
+
+div[vector]::before{
+    content: '\2329';
+    font-style:normal;
+    margin-right:-6px;
+}
+
+div[vector]::after{
+    content: '\232A';
+    font-style:normal;
+    margin-left:-4px;
 }
 
 div[doubleintegral]::before {
@@ -707,7 +733,8 @@ div[equation] > div[add],
 div[equation] > div[subtract],
 div[equation] > div[multiply],
 div[equation] > div[divide],
-div[equation] > div[term] {
+div[equation] > div[term],
+div[equation] > div[vector]{
     display: inline-block;
     font-size: 1.5em;
     font-style: italic;

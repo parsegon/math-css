@@ -218,7 +218,14 @@ MathCSS also tries to allow users to never have to look up the unicode for commo
 </div>
 ```
 
+### Vector Brackets
+#### You can add vector wide brackets using `vector` instead of `term`. 
 
+```HTML
+<div vector>
+    4x, 3
+</div>
+```
 
 ### HR Magic!
 
