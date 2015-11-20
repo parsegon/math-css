@@ -27,6 +27,33 @@ div[equation] sup {
     font-size: 0.4em;
 }
 
+/* mathbox Alias */
+
+div[mathbox] {
+    box-sizing: border-box;
+    height: auto;
+    margin: 50px auto 0;
+    min-height: 100px;
+    width: 80%;
+}
+
+div[mathbox]::after{
+    clear: both;
+    content: '';
+    display: table;
+}
+
+div[mathbox] * {
+    box-sizing: border-box;
+    float: left;
+}
+
+div[mathbox] sup {
+    float: none;
+    font-size: 0.4em;
+}
+
+
 div[integral],
 div[doubleintegral],
 div[contourintegral],
