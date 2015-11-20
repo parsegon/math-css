@@ -150,6 +150,8 @@ a fraction, but not a subfraction in a subfraction in a subfraction due to sizin
 </div>
 ```
 
+If you ever need to enclose a fraction in a fraction in a fraction, it is optimal to use a de facto (x / y) notation - that helps with readibility anyway due the decreasing sizes of integer. 
+
 Since derivatives are technically both a fraction and an operand, they behave like a fraction in MathCSS. For the term that is being derived, just follow the derivative with a `term` tag. For example:
 
 ```HTML
