@@ -598,7 +598,6 @@ div[derivative] > div[top] {
 }
 
 div[derivative] > div[bottom] {
-    border-top: 2px solid #444;
     font-size: 1.3em;
     font-style: italic;
     height: relative;
