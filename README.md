@@ -1,11 +1,11 @@
 # MathCSS
 
-A verbose, responsive, and easy way to represent basic math and calculus by a few lines of HTML without the need for a heavier JavaScript library. Built exclusively in CSS using a block-chain technique. 
+A verbose, responsive, and easy way to represent basic math and calculus by a few lines of HTML without the need for a heavier JavaScript library. Built exclusively in CSS using a block-chain technique.  Sister library to: https://github.com/mathexl/chemistry-css
 
 Support soon to be added for :
 
 * Character decorators (such as vectors)
-* Display-line containers (such as `\sqrt`, `\frac`, etc)
+* Display-line containers (such as `\frac`, etc)
 
 ![Render Example](/example/render5.png)
 
