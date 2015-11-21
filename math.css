@@ -690,6 +690,20 @@ div[equation] > hr[multiply] {
     width: auto;
 }
 
+div[mathbox] > hr[multiply] {
+    border: none;
+    clear: none;
+    display: inline-block;
+    font-size: 1.5em;
+    font-style: italic;
+    height: 100px;
+    margin: 0;
+    padding-left: 3px;
+    padding-top: 35px;
+    position: relative;
+    width: auto;
+}
+
 hr[divide] {
     display: inline-block;
 }
@@ -701,6 +715,20 @@ hr[divide]::before {
 }
 
 div[equation] > hr[divide] {
+    border: none;
+    clear: none;
+    display: inline-block;
+    font-size: 1.5em;
+    font-style: italic;
+    height: 100px;
+    margin: 0;
+    padding-left: 3px;
+    padding-top: 35px;
+    position: relative;
+    width: auto;
+}
+
+div[mathbox] > hr[divide] {
     border: none;
     clear: none;
     display: inline-block;
@@ -736,6 +764,23 @@ div[equation] > div[multiply],
 div[equation] > div[divide],
 div[equation] > div[term],
 div[equation] > div[vector]{
+    display: inline-block;
+    font-size: 1.5em;
+    font-style: italic;
+    height: 100px;
+    margin-top: 0;
+    padding-left: 3px;
+    padding-top: 35px;
+    position: relative;
+    width: auto;
+}
+
+div[mathbox] > div[add],
+div[mathbox] > div[subtract],
+div[mathbox] > div[multiply],
+div[mathbox] > div[divide],
+div[mathbox] > div[term],
+div[mathbox] > div[vector]{
     display: inline-block;
     font-size: 1.5em;
     font-style: italic;
@@ -979,3 +1024,228 @@ hr[multiply]::before {
     float: left;
     font-style: normal;
 }
+
+
+div[mathbox] hr {
+    border: none;
+    clear: none;
+    margin: 0;
+}
+
+div[mathbox] hr[partial]::before {
+    content: '\2202';
+    font-style: normal;
+}
+
+div[mathbox] hr[pm]::before {
+    content: '\2213';
+    font-style: normal;
+}
+
+div[mathbox] hr[infty] {
+    -webkit-margin-after: -6px !important;
+    -webkit-margin-before: 2px !important;
+    display: inline-block !important;
+    float: none !important;
+}
+
+div[mathbox] hr[infty]::before {
+    content: '\221e';
+    font-style: normal;
+}
+
+div[mathbox] hr[approx]::before {
+    content: '\2248';
+    font-style: normal;
+}
+
+div[mathbox] hr[neq]::before {
+    content: '\2260';
+    font-style: normal;
+}
+
+div[mathbox] hr[leq]::before {
+    content: '\2264';
+    font-style: normal;
+}
+
+div[mathbox] hr[geq]::before {
+    content: '\2265';
+    font-style: normal;
+}
+
+div[mathbox] hr[forall]::before {
+    content: '\2200';
+    font-style: normal;
+}
+
+div[mathbox] hr[exists]::before {
+    content: '\2203';
+    font-style: normal;
+}
+
+div[mathbox] hr[nexists]::before {
+    content: '\2204';
+    font-style: normal;
+}
+
+div[mathbox] hr[in]::before {
+    content: '\2208';
+    font-style: normal;
+}
+
+div[mathbox] hr[notin]::before {
+    content: '\2209';
+    font-style: normal;
+}
+
+div[mathbox] hr[and]::before {
+    content: '\2227';
+    font-style: normal;
+}
+
+div[mathbox] hr[or]::before {
+    content: '\2228';
+    font-style: normal;
+}
+
+div[mathbox] hr[cap]::before {
+    content: '\2229';
+    font-style: normal;
+}
+
+div[mathbox] hr[cup]::before {
+    content: '\222A';
+    font-style: normal;
+}
+
+
+/* Discrete Functionality */
+
+div[mathbox] hr[congruent]::before {
+    content: '\2261';
+    font-style: normal;
+}
+
+div[mathbox] hr[subsetleft]::before {
+    content: '\2282';
+    font-style: normal;
+}
+
+div[mathbox] hr[subsetright]::before {
+    content: '\2283';
+    font-style: normal;
+}
+
+div[mathbox] hr[notsubsetleft]::before {
+    content: '\2284';
+    font-style: normal;
+}
+
+div[mathbox] hr[notsubsetright]::before {
+    content: '\2285';
+    font-style: normal;
+}
+
+div[mathbox] hr[subsetorequaltoleft]::before {
+    content: '\2286';
+    font-style: normal;
+}
+
+div[mathbox] hr[subsetorequaltoright]::before {
+    content: '\2287';
+    font-style: normal;
+}
+
+div[mathbox] hr[notsubsetorequaltoleft]::before {
+    content: '\2288';
+    font-style: normal;
+}
+
+div[mathbox] hr[notsubsetorequaltoright]::before {
+    content: '\2289';
+    font-style: normal;
+}
+
+
+/* Greek Functionality */
+
+div[mathbox] hr[pi] {
+    -webkit-margin-after: -4px !important;
+    display: inline-block !important;
+    float: none !important;
+}
+
+div[mathbox] hr[pi]::before {
+    content: '\03C0';
+    font-style: normal;
+}
+
+div[mathbox] hr[alpha]::before {
+    content: '\03B1';
+    font-style: normal;
+}
+
+div[mathbox] hr[beta]::before {
+    content: '\03B2';
+    font-style: normal;
+}
+
+div[mathbox] hr[lambda]::before {
+    content: '\03BB';
+    font-style: normal;
+}
+
+div[mathbox] hr[delta]::before {
+    content: '\2206';
+    font-style: normal;
+}
+
+hr[add] {
+    display: inline-block;
+}
+
+hr[add]::before {
+    content: '+';
+    float: left;
+    font-style: normal;
+}
+
+div[mathbox] > hr[add] {
+    border: none;
+    clear: none;
+    display: inline-block;
+    font-size: 1.5em;
+    font-style: italic;
+    height: 100px;
+    margin: 0;
+    padding-left: 3px;
+    padding-top: 35px;
+    position: relative;
+    width: auto;
+}
+
+hr[subtract] {
+    display: inline-block;
+}
+
+hr[subtract]::before {
+    content: '-';
+    float: left;
+    font-style: normal;
+}
+
+div[mathbox] > hr[subtract] {
+    border: none;
+    clear: none;
+    display: inline-block;
+    font-size: 1.5em;
+    font-style: italic;
+    height: 100px;
+    margin: 0;
+    padding-left: 3px;
+    padding-top: 35px;
+    position: relative;
+    width: auto;
+}
+
