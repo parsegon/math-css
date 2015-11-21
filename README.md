@@ -29,7 +29,8 @@ First, add the CSS file to your page:
 <link href="path/to/math.css" rel="stylesheet">
 ```
 
-And you're ready to go! Documentation is easy as provided below. Simply, add an equation attribute to begin as follows:
+And you're ready to go! Documentation is easy as provided below. Simply, add an `equation` attribute to begin as follows (you can 
+use the `mathbox` alias as well):
 
 ```HTML
 <div equation>
