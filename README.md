@@ -331,4 +331,4 @@ If you want to add exponents, use the standard HTML `<sup></sup>` tags:
 
 MIT License: free to use and open source.
 
-Want to add something? Feel free to fork or email me at mathexl@gmail.com.
+Want to add something? Feel free to fork or email me at mathexl@gmail.com.  Or even send me a tweet to @mathewpregasen :).
