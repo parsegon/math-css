@@ -5,7 +5,6 @@ A verbose, responsive, and easy way to represent basic math and calculus by a fe
 Support soon to be added for :
 
 * Character decorators (such as vectors)
-* Display-line containers (such as `\frac`, etc)
 
 ![Render Example](/example/render6.png)
 
@@ -332,4 +331,4 @@ If you want to add exponents, use the standard HTML `<sup></sup>` tags:
 
 MIT License: free to use and open source.
 
-Want to add something? Feel free to fork or email me at mathexl@gmail.com.
+Want to add something? Feel free to fork or email me at mathexl@gmail.com.  Or even send me a tweet to @mathewpregasen :).
