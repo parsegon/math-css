@@ -157,10 +157,10 @@ Since derivatives are technically both a fraction and an operand, they behave li
 ```HTML
 <div derivative>
     <div top>
-        dx 
+        x 
     </div>
     <div bottom>
-        dy
+        y
     </div>
 </div>
 
