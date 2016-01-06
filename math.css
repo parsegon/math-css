@@ -1,7 +1,7 @@
 /*
     Math is cool, CSS is cool, use for whatever you like!
     Made by Mathew Pregasen. MIT license.
-    If you have any additions or questions, feel free to contact me     
+    If you have any additions or questions, feel free to contact me
     at mathexl@gmail.com
 */
 
@@ -9,7 +9,7 @@
 div[equation] {
     box-sizing: border-box;
     height: auto;
-    margin: 50px auto 0;
+    margin: 0px auto 0;
     min-height: 100px;
     width: 80%;
 }
@@ -135,7 +135,7 @@ div[root] {
     width: auto;
     margin-top:30px;
     padding-top: 10px;
-    
+
     border-top:2px black solid;
 }
 
@@ -161,8 +161,8 @@ div[root] > div[degree] {
     position:absolute;
     top:6px;
     left:-17px;
-}    
-    
+}
+
 div[contourintegral] > div[upperbound] {
     font-size: 1em;
     font-style: italic;
@@ -523,7 +523,7 @@ div[fraction] sup {
 }
 
 div[fraction] > div[top] {
-    border-bottom: 2px solid #444;
+    border-bottom: 2px solid white;
     font-size: 1.3em;
     font-style: italic;
     height: 24px;
@@ -662,6 +662,14 @@ div[derivative] > div[bottom] {
     text-align: center;
     top: 26px;
 }
+
+div[derivative] > div[top]::before,
+div[derivative] > div[bottom]::before {
+    content: 'd';
+    font-style: normal;
+    margin-right: -5px;
+}
+
 
 div[partial] > div[top]::before,
 div[partial] > div[bottom]::before {
@@ -1250,4 +1258,3 @@ div[mathbox] > hr[subtract] {
     position: relative;
     width: auto;
 }
-
