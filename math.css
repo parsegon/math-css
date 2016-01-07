@@ -818,6 +818,18 @@ div[equation] hr[pm]::before {
     font-style: normal;
 }
 
+div[equation] hr[times] {
+    -webkit-margin-after: -6px !important;
+    -webkit-margin-before: 2px !important;
+    display: inline-block !important;
+    float: none !important;
+}
+
+div[equation] hr[times]::before {
+    content: '\00D7';
+    font-style: normal;
+}
+
 div[equation] hr[infty] {
     -webkit-margin-after: -6px !important;
     -webkit-margin-before: 2px !important;
@@ -1049,6 +1061,18 @@ div[mathbox] hr[partial]::before {
 
 div[mathbox] hr[pm]::before {
     content: '\2213';
+    font-style: normal;
+}
+
+div[mathbox] hr[times] {
+    -webkit-margin-after: -6px !important;
+    -webkit-margin-before: 2px !important;
+    display: inline-block !important;
+    float: none !important;
+}
+
+div[mathbox] hr[times]::before {
+    content: 'x';
     font-style: normal;
 }
 
