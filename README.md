@@ -5,6 +5,9 @@ A verbose, responsive, and easy way to represent basic math and calculus by a fe
 Support soon to be added for :
 
 * Character decorators (such as vectors)
+* 
+
+Stay tuned for added power with http://mathex.io (still in alpha). 
 
 ![Render Example](/example/render6.png)
 
