@@ -14,6 +14,11 @@ div[equation] {
     width: 80%;
 }
 
+
+div[equation].red {
+    color:rgba(241,111,92,1);
+}
+
 div[equation]::after{
     clear: both;
     content: '';
@@ -135,8 +140,15 @@ div[root] {
     width: auto;
     margin-top:30px;
     padding-top: 10px;
-
     border-top:2px black solid;
+}
+
+div[equation].white > div[root]{
+    border-top:2px white solid;
+}
+
+div[equation].red > div[root]{
+    border-top:2px rgba(241,111,92,1) solid;
 }
 
 div[root]::before {
@@ -163,6 +175,16 @@ div[root] > div[degree] {
     left:-17px;
 }
 
+
+div > div[upperbound] {
+    min-width:70px;
+}
+
+div > div[lowerbound] {
+    min-width:70px;
+}
+
+
 div[contourintegral] > div[upperbound] {
     font-size: 1em;
     font-style: italic;
@@ -171,6 +193,7 @@ div[contourintegral] > div[upperbound] {
     position: absolute;
     top: 8px;
     width: auto;
+    min-width:70px;
 }
 
 div[contourintegral] > div[lowerbound] {
@@ -181,6 +204,7 @@ div[contourintegral] > div[lowerbound] {
     position: absolute;
     top: 65px;
     width: auto;
+    min-width:70px;
 }
 
 div[contourintegral] > div[of] {
@@ -523,7 +547,7 @@ div[fraction] sup {
 }
 
 div[fraction] > div[top] {
-    border-bottom: 2px solid white;
+    border-bottom: 2px solid #444;
     font-size: 1.3em;
     font-style: italic;
     height: 24px;
@@ -806,6 +830,8 @@ div[equation] hr {
     border: none;
     clear: none;
     margin: 0;
+    display:inline-block;
+    float:left;
 }
 
 div[equation] hr[partial]::before {
