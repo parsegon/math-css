@@ -4,9 +4,7 @@ A verbose, responsive, and easy way to represent basic math and calculus by a fe
 
 Support soon to be added for :
 
-* Character decorators (such as vectors)
-*
-
+* Multi-bounds
 
 ![Render Example](/example/render7.png)
 
