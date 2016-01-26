@@ -2,9 +2,7 @@
 
 A verbose, responsive, and easy way to represent basic math and calculus by a few lines of HTML without the need for a heavier JavaScript library. Built exclusively in CSS using a block-chain technique.  Sister library to: https://github.com/mathexl/chemistry-css
 
-Support soon to be added for :
 
-* Multi-bounds
 
 ![Render Example](/example/render7.png)
 
@@ -21,6 +19,8 @@ Support soon to be added for :
 **What isn't Math CSS made for?**
 * While an all-CSS solution is nice, there are limits. MathCSS will not be able to scale as easily. Stay tuned for added power with http://mathex.io (still in alpha), however.
 
+**Support soon to be added for**:
+* Multi-bounds
 
 
 ## Usage
