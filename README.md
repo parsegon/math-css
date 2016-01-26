@@ -9,7 +9,7 @@ Support soon to be added for :
 
 Stay tuned for added power with http://mathex.io (still in alpha).
 
-![Render Example](/example/render6.png)
+![Render Example](/example/render7.png)
 
 **New in 2.5.0**
 * Added support for Matrixes
