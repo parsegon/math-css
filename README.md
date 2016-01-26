@@ -5,11 +5,15 @@ A verbose, responsive, and easy way to represent basic math and calculus by a fe
 Support soon to be added for :
 
 * Character decorators (such as vectors)
-* 
+*
 
-Stay tuned for added power with http://mathex.io (still in alpha). 
+Stay tuned for added power with http://mathex.io (still in alpha).
 
 ![Render Example](/example/render6.png)
+
+**New in 2.5.0**
+* Added support for Matrixes
+* Added support for display in white
 
 **What's MathCSS good for?**
 * Quick depictions of integrals, summations, products, and alike.
@@ -18,7 +22,7 @@ Stay tuned for added power with http://mathex.io (still in alpha).
 * Special math symbols without looking up the unicode.
 
 **What isn't Math CSS made for?**
-* While an all-CSS solution is nice, there are limits. MathCSS will not be able to scale as easily. If you need users to interact with your math, I highly recommend a Javascript engine like [MathJax](https://www.mathjax.org/).
+* While an all-CSS solution is nice, there are limits. MathCSS will not be able to scale as easily.
 
 
 ## Usage
@@ -31,7 +35,7 @@ First, add the CSS file to your page:
 <link href="path/to/math.css" rel="stylesheet">
 ```
 
-And you're ready to go! Documentation is easy as provided below. Simply, add an `equation` attribute to begin as follows (you can 
+And you're ready to go! Documentation is easy as provided below. Simply, add an `equation` attribute to begin as follows (you can
 use the `mathbox` alias as well):
 
 ```HTML
@@ -40,6 +44,14 @@ use the `mathbox` alias as well):
 </div>
 ```
 
+If you want the display to be entirely in white, add the class `white` to the
+`<div>` tag.  So:
+
+```HTML
+<div equation class="white">
+<!-- Your equation will go here -->
+</div>
+```
 
 ### Integrals, Products, Summations
 
@@ -53,7 +65,7 @@ use the `mathbox` alias as well):
 </div>
 ```
 
-To specify bounds and input, simply use `upperbound`, `lowerbound`, and `of` attributes: 
+To specify bounds and input, simply use `upperbound`, `lowerbound`, and `of` attributes:
 
 ```HTML
 <div integral>
@@ -99,7 +111,7 @@ To specify top and bottom, simply use `top` and `bottom` attributes:
 </div>
 ```
 
-While MathCSS cannot support infinite fraction's within each other, it can go down a scope of 2.  You can embed a subfraction in 
+While MathCSS cannot support infinite fraction's within each other, it can go down a scope of 2.  You can embed a subfraction in
 a fraction, but not a subfraction in a subfraction in a subfraction due to sizing constraints. For instace, the following code will work:
 
 ```HTML
@@ -115,7 +127,7 @@ a fraction, but not a subfraction in a subfraction in a subfraction due to sizin
             </div>  
         </div>
 
-        + y<sup>2</sup> + 
+        + y<sup>2</sup> +
 
         <div fraction>
             <div top>
@@ -128,7 +140,7 @@ a fraction, but not a subfraction in a subfraction in a subfraction due to sizin
 
     </div>
     <div bottom>
-       
+
         <div fraction>
             <div top>
                 35x + 2x
@@ -138,7 +150,7 @@ a fraction, but not a subfraction in a subfraction in a subfraction due to sizin
             </div>  
         </div>
 
-        + 5 + 
+        + 5 +
 
         <div fraction>
             <div top>
@@ -153,14 +165,14 @@ a fraction, but not a subfraction in a subfraction in a subfraction due to sizin
 </div>
 ```
 
-If you ever need to enclose a fraction in a fraction in a fraction, it is optimal to use a de facto (x / y) notation - that helps with readibility anyway due the decreasing sizes of integer. 
+If you ever need to enclose a fraction in a fraction in a fraction, it is optimal to use a de facto (x / y) notation - that helps with readibility anyway due the decreasing sizes of integer.
 
 Since derivatives are technically both a fraction and an operand, they behave like a fraction in MathCSS. For the term that is being derived, just follow the derivative with a `term` tag. For example:
 
 ```HTML
 <div derivative>
     <div top>
-        x 
+        x
     </div>
     <div bottom>
         y
@@ -177,7 +189,7 @@ MathCSS also tries to allow users to never have to look up the unicode for commo
 ```HTML
 <div partial derivative>
     <div top>
-        x 
+        x
     </div>
     <div bottom>
         y
@@ -210,7 +222,7 @@ MathCSS also tries to allow users to never have to look up the unicode for commo
 
 ### Square Roots and Roots
 
-#### You can add square roots easily using the `root` attribute.  You can also specify the degree of the root with `degree`.  Use `of` for the term. The `degree` tag is optional. 
+#### You can add square roots easily using the `root` attribute.  You can also specify the degree of the root with `degree`.  Use `of` for the term. The `degree` tag is optional.
 
 ```HTML
 <div root>
@@ -224,7 +236,7 @@ MathCSS also tries to allow users to never have to look up the unicode for commo
 ```
 
 ### Vector Brackets
-#### You can add vector wide brackets using `vector` instead of `term`. 
+#### You can add vector wide brackets using `vector` instead of `term`.
 
 ```HTML
 <div vector>
@@ -252,7 +264,7 @@ For example, if you want to show the integral from the upperbound of infinity to
 </div>
 ```
 
-The above code renders: 
+The above code renders:
 
 ![Render Example](/example/render3.png)
 
@@ -329,6 +341,63 @@ If you want to add exponents, use the standard HTML `<sup></sup>` tags:
 </div>
 ```
 
+### Matrixes
+
+The inherent complexity of matrixes makes them a bit different syntactically
+in Math.css.  Math.css supports matrixes up to the size of 8 rows and infinite (within reason)
+cols.  First, you need to declare the type of matrix along with the number of rows.  
+Due to the limits of CSS, the amount of rows needs to be statically declared unlike
+the number of cols.
+
+```HTML
+<div matrix two>
+  <!-- content here! -->
+</div>
+```  
+
+This will create a matrix of two rows.  The key attributes `three`, `four`,
+`five`, `six`, `seven`, `eight` all work respectively.  
+
+Due to the need to dynamically size the width of entries for long entries,
+we need to insert things into a matrix on a column to column basis.  
+
+To make things easy, math.css ships with two different ways of inserting
+columns.  The first is the b-a method, which encloses a tags (entries) with
+b tags (cols).  For instance, if I wanted the matrix of two by two rows,
+with the first row being 6 and 12, and the second row being 4 and 5, we get this:
+
+
+```HTML
+<div matrix two>
+  <b>
+    <a>6</a>
+    <a>4</a>
+  </b>  
+  <b>
+    <a>12</a>
+    <a>5</a>
+  </b>
+</div>
+```  
+
+However, this can get tedious given the amalgam of tags necessary.  Therefore,
+you can instead use the alternate `<hr>` method where you separate each entry with
+an `<hr>` tag. Therefore, nothing is enclosed.
+
+```HTML
+<div matrix two>
+  <b>
+    6
+    <hr>
+    4
+  </b>  
+  <b>
+    12
+    <hr>
+    5
+  </b>
+</div>
+```
 
 ## License
 
