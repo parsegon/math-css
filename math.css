@@ -74,6 +74,7 @@ div[volumeintegral],
 div[tripleintegral],
 div[summation],
 div[fraction],
+div[choose],
 div[contourintegral],
 div[limit] {
     display: inline-block;
@@ -672,6 +673,83 @@ div[fraction] > div[bottom] > div[fraction] > div[bottom] {
     text-align: center;
     top: 11px;
 }
+
+
+
+div[choose] {
+    display: inline-block;
+    float: left;
+    height: 100px;
+    margin-left: 10px;
+    padding-left: 9px;
+    padding-right: 9px;
+    position: relative;
+    width: auto;
+    
+}
+
+
+div[choose] > div[top] {
+    font-size: 1.3em;
+    font-style: italic;
+    height: 24px;
+    min-width: 100%;
+    padding-bottom: 3px;
+    position: relative;
+    text-align: center;
+    top: 28px;
+    width: 100%;
+    clear:both;
+    float:none;
+}
+
+
+div[choose] > div[bottom] {
+    font-size: 1.3em;
+    font-style: italic;
+    height: relative;
+    min-width: 100%;
+    position: relative;
+    text-align: center;
+    top: 26px;
+
+}
+
+div[choose]::before{
+  display: block;
+    height: 100%;
+    left: 0px;
+    width: 10px;
+    font-weight: 100;
+    -webkit-margin-before: 0em;
+    -webkit-margin-after: 0em;
+    -webkit-margin-start: 0;
+    -webkit-margin-end: 0;
+    position: absolute;
+    top: 21px;
+    content: "(";
+    font-size:3em;
+    left: -7px;
+    font-family:sans-serif;
+}
+
+div[choose]::after{
+  display: block;
+    height: 100%;
+    width: 10px;
+    font-weight: 100;
+    -webkit-margin-before: 0em;
+    -webkit-margin-after: 0em;
+    -webkit-margin-start: 0;
+    -webkit-margin-end: 0;
+    position: absolute;
+    top: 21px;
+    content: ")";
+    font-size:3em;
+        font-family:sans-serif;
+    right: -5px;
+}
+
 
 
 
