@@ -397,6 +397,21 @@ an `<hr>` tag. Therefore, nothing is enclosed.
 </div>
 ```
 
+### Choose
+
+If you want to add probability constructs like n choose k, simply use the `choose` tag, similar to 
+how you would construct a fraction.  Using the tags `top` and `bottom` for each part of the choose. 
+
+```HTML
+<div choose>
+    <div top>
+        4
+    </div>
+    <div bottom>
+        3
+    </div>
+</div>
+```
 ## License
 
 MIT License: free to use and open source.
