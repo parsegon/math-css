@@ -16,8 +16,6 @@ A verbose, responsive, and easy way to represent basic math and calculus by a fe
 * Scalable, responsive design.  MathCSS is built like a **c**hoo-**c**hoo-**s** train.
 * Special math symbols without looking up the unicode.
 
-**What isn't Math CSS made for?**
-* While an all-CSS solution is nice, there are limits. MathCSS will not be able to scale as easily. Stay tuned for added power with http://mathex.io (still in alpha), however.
 
 **Support soon to be added for**:
 * Multi-bounds
