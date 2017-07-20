@@ -281,6 +281,14 @@ The tags `<hr pi>` and `<hr infty>` will automatically show. The available subcl
 
 `pi`, `alpha`, `beta`, `lambda`, `delta` (more coming soon)
 
+### Absolute Value
+
+To add absolute value, you can either use the `u` tag or use `<span absolute>` with whatever is being
+absoluted.  For instance:
+
+``HTML
+<u>-5</u> + <span absolute>-5</span> = 10 
+```
 
 ### General Operands
 

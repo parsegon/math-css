@@ -1,3 +1,24 @@
+
+@font-face {
+    font-family: 'stixgeneralregular';
+    src: url('stixgeneral-regular-webfont.woff2') format('woff2'),
+         url('stixgeneral-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'stixgeneralregular';
+    src: url('stix-italic-webfont.woff2') format('woff2'),
+         url('stix-italic-webfont.woff') format('woff');
+    font-weight: italic;
+    font-style: italic;
+}
+
+
+
+
 /*
     Math is cool, CSS is cool, use for whatever you like!
     Made by Mathew Pregasen. MIT license.
@@ -12,6 +33,37 @@ div[equation] {
     margin: 0px auto 0;
     min-height: 100px;
     width: 80%;
+    font-family:'stixgeneralregular';
+}
+
+*[absolute] {
+    text-decoration: none;
+    float:none;
+    border-left:2px black solid;
+    border-right:2px black solid;
+    padding-left:2px;
+    padding-right:2px;
+}
+
+
+*[absolute].white {
+    border-left:2px white solid;
+    border-right:2px white solid;
+}
+
+div[equation] u {
+    text-decoration: none;
+    float:none;
+    border-left:2px black solid;
+    border-right:2px black solid;
+    padding-left:2px;
+    padding-right:2px;
+}
+
+
+div[equation].white u {
+    border-left:2px white solid;
+    border-right:2px white solid;
 }
 
 
@@ -39,9 +91,16 @@ div[equation] sup {
     font-size: 0.4em;
 }
 
-/* mathbox Alias */
+div[equation] sub {
+    float: none;
+    font-size: 0.4em;
+    vertical-align: baseline;
+}
 
-div[mathbox] {
+
+/* equation Alias */
+
+div[equation] {
     box-sizing: border-box;
     height: auto;
     margin: 50px auto 0;
@@ -49,18 +108,18 @@ div[mathbox] {
     width: 80%;
 }
 
-div[mathbox]::after{
+div[equation]::after{
     clear: both;
     content: '';
     display: table;
 }
 
-div[mathbox] * {
+div[equation] * {
     box-sizing: border-box;
     float: left;
 }
 
-div[mathbox] sup {
+div[equation] sup {
     float: none;
     font-size: 0.4em;
 }
@@ -287,6 +346,27 @@ div[doubleintegral] > div[lowerbound] {
     width: auto;
 }
 
+div[integral] > div[region] {
+    font-size: 1.3em;
+    font-style: italic;
+    height: auto;
+    padding-left: 2.5px;
+    position: absolute;
+    top: 85px;
+    width: auto;
+}
+
+
+div[doubleintegral] > div[region] {
+    font-size: 1.3em;
+    font-style: italic;
+    height: auto;
+    padding-left: 12.5px;
+    position: absolute;
+    top: 85px;
+    width: auto;
+}
+
 div[doubleintegral] > div[of] {
     display: inline-block;
     font-size: 1.5em;
@@ -397,6 +477,17 @@ div[tripleintegral] > div[lowerbound] {
     width: auto;
 }
 
+div[tripleintegral] > div[region] {
+    font-size: 1.3em;
+    font-style: italic;
+    height: auto;
+    padding-left: 25px;
+    position: absolute;
+    top: 85px;
+    width: auto;
+}
+
+
 div[tripleintegral] > div[of] {
     display: inline-block;
     font-size: 1.5em;
@@ -465,6 +556,7 @@ div[summation] > div[upperbound] {
     text-align: center;
     top: 2px;
     width: 50px;
+    left:0px;
 }
 
 div[summation] > div[lowerbound] {
@@ -475,6 +567,7 @@ div[summation] > div[lowerbound] {
     text-align: center;
     top: 82px;
     width: 45px;
+    left:0px;
 }
 
 div[summation] > div[of] {
@@ -685,7 +778,7 @@ div[choose] {
     padding-right: 9px;
     position: relative;
     width: auto;
-    
+    margin-right:10px;
 }
 
 
@@ -730,7 +823,7 @@ div[choose]::before{
     content: "(";
     font-size:3em;
     left: -7px;
-    font-family:sans-serif;
+    font-family:'stixgeneralregular', sans-serif;
 }
 
 div[choose]::after{
@@ -746,8 +839,16 @@ div[choose]::after{
     top: 21px;
     content: ")";
     font-size:3em;
-        font-family:sans-serif;
+        font-family:'stixgeneralregular', sans-serif;
     right: -5px;
+}
+
+.white div[choose]::before{
+    color:white;
+}
+
+.white div[choose]::after{
+    color:white;
 }
 
 
@@ -802,6 +903,20 @@ div[partial] > div[bottom]::before {
     margin-right: -5px;
 }
 
+div[double] > div[top]::before{
+    content: 'd\00B2';
+    margin-right: -5px;
+}
+
+div[double] > div[bottom]{
+  width:auto;
+}
+
+div[double] > div[bottom]::after{
+    content: '\00B2';
+    margin-left: -5px;
+}
+
 div[add],
 div[subtract],
 div[multiply],
@@ -825,7 +940,7 @@ div[equation] > hr[multiply] {
     width: auto;
 }
 
-div[mathbox] > hr[multiply] {
+div[equation] > hr[multiply] {
     border: none;
     clear: none;
     display: inline-block;
@@ -863,7 +978,7 @@ div[equation] > hr[divide] {
     width: auto;
 }
 
-div[mathbox] > hr[divide] {
+div[equation] > hr[divide] {
     border: none;
     clear: none;
     display: inline-block;
@@ -910,12 +1025,12 @@ div[equation] > div[vector]{
     width: auto;
 }
 
-div[mathbox] > div[add],
-div[mathbox] > div[subtract],
-div[mathbox] > div[multiply],
-div[mathbox] > div[divide],
-div[mathbox] > div[term],
-div[mathbox] > div[vector]{
+div[equation] > div[add],
+div[equation] > div[subtract],
+div[equation] > div[multiply],
+div[equation] > div[divide],
+div[equation] > div[term],
+div[equation] > div[vector]{
     display: inline-block;
     font-size: 1.5em;
     font-style: italic;
@@ -932,7 +1047,354 @@ div[equation] hr {
     clear: none;
     margin: 0;
     display:inline-block;
-    float:left;
+    float:none;
+}
+
+div[equation] hr[partial]::before {
+    content: '\2202';
+    font-style: normal;
+}
+
+div[equation] hr[null]::before{
+    content: '\2205';
+    font-style:normal;
+}
+
+div[equation] hr[real]::before{
+    content: '\211D';
+    font-style:normal;
+}
+
+div[equation] hr[integers]::before{
+    content: '\2124';
+    font-style:normal;
+}
+
+div[equation] hr[natural]::before{
+    content: '\2115';
+    font-style:normal;
+}
+
+
+
+div[equation] hr[rational]::before{
+    content: '\211A';
+    font-style:normal;
+    font-family:'stixgeneralregular', Times;
+}
+
+div[equation] hr[pm]::before {
+    content: '\2213';
+    font-style: normal;
+}
+
+div[equation] hr[times] {
+    -webkit-margin-after: -6px !important;
+    -webkit-margin-before: 2px !important;
+    display: inline-block !important;
+    float: none !important;
+}
+
+div[equation] hr[times]::before {
+    content: '\00D7';
+    font-style: normal;
+}
+
+div[equation] hr[infty] {
+    -webkit-margin-after: -6px !important;
+    -webkit-margin-before: 2px !important;
+    display: inline-block !important;
+    float: none !important;
+}
+
+div[equation] hr[infty]::before {
+    content: '\221e';
+    font-style: normal;
+}
+
+div[equation] hr[nabla]::before {
+    content: '\2207';
+    font-style: normal;
+}
+
+div[equation] hr[lomega]::before {
+    content: '\03C9';
+    font-style: normal;
+}
+
+div[equation] hr[lambda]::before {
+    content: '\03BB';
+    font-style: normal;
+}
+
+div[equation] hr[proportional]::before {
+    content: '\221D';
+    font-style: normal;
+}
+
+div[equation] hr[dot]::before {
+    content: '\00B7';
+    font-style: normal;
+}
+
+div[equation] hr[approx]::before {
+    content: '\2248';
+    font-style: normal;
+}
+
+
+
+
+div[equation] hr[neq]::before {
+    content: '\2260';
+    font-style: normal;
+}
+
+div[equation] hr[leq]::before {
+    content: '\2264';
+    font-style: normal;
+}
+
+div[equation] hr[goesto]::before {
+    content: '\2192';
+    font-style: normal;
+}
+
+div[equation] hr[geq]::before {
+    content: '\2265';
+    font-style: normal;
+}
+
+div[equation] hr[forall]::before {
+    content: '\2200';
+    font-style: normal;
+}
+
+div[equation] hr[exists]::before {
+    content: '\2203';
+    font-style: normal;
+}
+
+div[equation] hr[nexists]::before {
+    content: '\2204';
+    font-style: normal;
+}
+
+div[equation] hr[in]::before {
+    content: '\2208';
+    font-style: normal;
+}
+
+div[equation] hr[notin]::before {
+    content: '\2209';
+    font-style: normal;
+}
+
+div[equation] hr[and]::before {
+    content: '\2227';
+    font-style: normal;
+}
+
+div[equation] hr[or]::before {
+    content: '\2228';
+    font-style: normal;
+}
+
+div[equation] hr[cap]::before {
+    content: '\2229';
+    font-style: normal;
+}
+
+div[equation] hr[cup]::before {
+    content: '\222A';
+    font-style: normal;
+}
+
+div[equation] hr[not]::before {
+    content: '\00AC';
+    font-style: normal;
+}
+
+div[equation] hr[therefore]::before {
+    content: '\2234';
+    font-style: normal;
+}
+
+div[equation] hr[because]::before {
+    content: '\2235';
+    font-style: normal;
+}
+
+
+/* Discrete Functionality */
+
+div[equation] hr[congruent]::before {
+    content: '\2261';
+    font-style: normal;
+}
+
+div[equation] hr[subsetleft]::before {
+    content: '\2282';
+    font-style: normal;
+}
+
+div[equation] hr[subsetright]::before {
+    content: '\2283';
+    font-style: normal;
+}
+
+div[equation] hr[notsubsetleft]::before {
+    content: '\2284';
+    font-style: normal;
+}
+
+div[equation] hr[notsubsetright]::before {
+    content: '\2285';
+    font-style: normal;
+}
+
+div[equation] hr[subsetorequaltoleft]::before {
+    content: '\2286';
+    font-style: normal;
+}
+
+div[equation] hr[subsetorequaltoright]::before {
+    content: '\2287';
+    font-style: normal;
+}
+
+div[equation] hr[notsubsetorequaltoleft]::before {
+    content: '\2288';
+    font-style: normal;
+}
+
+div[equation] hr[notsubsetorequaltoright]::before {
+    content: '\2289';
+    font-style: normal;
+}
+
+
+/* Greek Functionality */
+
+div[equation] hr[pi] {
+    -webkit-margin-after: -4px !important;
+    display: inline-block !important;
+    float: none !important;
+}
+
+div[equation] hr[pi]::before {
+    content: '\03C0';
+    font-style: normal;
+}
+
+div[equation] hr[alpha]::before {
+    content: '\03B1';
+    font-style: normal;
+}
+
+div[equation] hr[chi]::before {
+    content: '\03C7';
+    font-style: normal;
+}
+
+div[equation] hr[flux]::before {
+    content: '\03A6';
+    font-style: normal;
+}
+
+div[equation] hr[dots]::before {
+    content: '\2026';
+    font-style: normal;
+}
+
+div[equation] hr[beta]::before {
+    content: '\03B2';
+    font-style: normal;
+}
+
+div[equation] hr[lambda]::before {
+    content: '\03BB';
+    font-style: normal;
+}
+
+div[equation] hr[delta]::before {
+    content: '\2206';
+    font-style: normal;
+}
+
+div[equation] hr[theta]::before {
+    content: '\03B8';
+    font-style: normal;
+}
+
+div[equation] hr[comega]::before {
+    content: '\2126';
+    font-style: normal;
+}
+
+hr[add] {
+    display: inline-block;
+}
+
+hr[add]::before {
+    content: '+';
+    float: left;
+    font-style: normal;
+}
+
+div[equation] > hr[add] {
+    border: none;
+    clear: none;
+    display: inline-block;
+    font-size: 1.5em;
+    font-style: italic;
+    height: 100px;
+    margin: 0;
+    padding-left: 3px;
+    padding-top: 35px;
+    position: relative;
+    width: auto;
+}
+
+hr[subtract] {
+    display: inline-block;
+}
+
+hr[subtract]::before {
+    content: '-';
+    float: left;
+    font-style: normal;
+}
+
+div[equation] > hr[subtract] {
+    border: none;
+    clear: none;
+    display: inline-block;
+    font-size: 1.5em;
+    font-style: italic;
+    height: 100px;
+    margin: 0;
+    padding-left: 3px;
+    padding-top: 35px;
+    position: relative;
+    width: auto;
+}
+
+hr[multiply] {
+    display: inline-block;
+}
+
+hr[multiply]::before {
+    content: '\00D7';
+    float: left;
+    font-style: normal;
+}
+
+
+div[equation] hr {
+    border: none;
+    clear: none;
+    margin: 0;
 }
 
 div[equation] hr[partial]::before {
@@ -1002,6 +1464,11 @@ div[equation] hr[exists]::before {
 div[equation] hr[nexists]::before {
     content: '\2204';
     font-style: normal;
+}
+
+div[equation] hr[nor]::before{
+    content: '\22BD';
+    font-style:normal;
 }
 
 div[equation] hr[in]::before {
@@ -1164,252 +1631,6 @@ div[equation] > hr[subtract] {
     width: auto;
 }
 
-hr[multiply] {
-    display: inline-block;
-}
-
-hr[multiply]::before {
-    content: '\00D7';
-    float: left;
-    font-style: normal;
-}
-
-
-div[mathbox] hr {
-    border: none;
-    clear: none;
-    margin: 0;
-}
-
-div[mathbox] hr[partial]::before {
-    content: '\2202';
-    font-style: normal;
-}
-
-div[mathbox] hr[pm]::before {
-    content: '\2213';
-    font-style: normal;
-}
-
-div[mathbox] hr[times] {
-    -webkit-margin-after: -6px !important;
-    -webkit-margin-before: 2px !important;
-    display: inline-block !important;
-    float: none !important;
-}
-
-div[mathbox] hr[times]::before {
-    content: 'x';
-    font-style: normal;
-}
-
-div[mathbox] hr[infty] {
-    -webkit-margin-after: -6px !important;
-    -webkit-margin-before: 2px !important;
-    display: inline-block !important;
-    float: none !important;
-}
-
-div[mathbox] hr[infty]::before {
-    content: '\221e';
-    font-style: normal;
-}
-
-div[mathbox] hr[approx]::before {
-    content: '\2248';
-    font-style: normal;
-}
-
-div[mathbox] hr[neq]::before {
-    content: '\2260';
-    font-style: normal;
-}
-
-div[mathbox] hr[leq]::before {
-    content: '\2264';
-    font-style: normal;
-}
-
-div[mathbox] hr[geq]::before {
-    content: '\2265';
-    font-style: normal;
-}
-
-div[mathbox] hr[forall]::before {
-    content: '\2200';
-    font-style: normal;
-}
-
-div[mathbox] hr[exists]::before {
-    content: '\2203';
-    font-style: normal;
-}
-
-div[mathbox] hr[nexists]::before {
-    content: '\2204';
-    font-style: normal;
-}
-
-div[mathbox] hr[in]::before {
-    content: '\2208';
-    font-style: normal;
-}
-
-div[mathbox] hr[notin]::before {
-    content: '\2209';
-    font-style: normal;
-}
-
-div[mathbox] hr[and]::before {
-    content: '\2227';
-    font-style: normal;
-}
-
-div[mathbox] hr[or]::before {
-    content: '\2228';
-    font-style: normal;
-}
-
-div[mathbox] hr[cap]::before {
-    content: '\2229';
-    font-style: normal;
-}
-
-div[mathbox] hr[cup]::before {
-    content: '\222A';
-    font-style: normal;
-}
-
-
-/* Discrete Functionality */
-
-div[mathbox] hr[congruent]::before {
-    content: '\2261';
-    font-style: normal;
-}
-
-div[mathbox] hr[subsetleft]::before {
-    content: '\2282';
-    font-style: normal;
-}
-
-div[mathbox] hr[subsetright]::before {
-    content: '\2283';
-    font-style: normal;
-}
-
-div[mathbox] hr[notsubsetleft]::before {
-    content: '\2284';
-    font-style: normal;
-}
-
-div[mathbox] hr[notsubsetright]::before {
-    content: '\2285';
-    font-style: normal;
-}
-
-div[mathbox] hr[subsetorequaltoleft]::before {
-    content: '\2286';
-    font-style: normal;
-}
-
-div[mathbox] hr[subsetorequaltoright]::before {
-    content: '\2287';
-    font-style: normal;
-}
-
-div[mathbox] hr[notsubsetorequaltoleft]::before {
-    content: '\2288';
-    font-style: normal;
-}
-
-div[mathbox] hr[notsubsetorequaltoright]::before {
-    content: '\2289';
-    font-style: normal;
-}
-
-
-/* Greek Functionality */
-
-div[mathbox] hr[pi] {
-    -webkit-margin-after: -4px !important;
-    display: inline-block !important;
-    float: none !important;
-}
-
-div[mathbox] hr[pi]::before {
-    content: '\03C0';
-    font-style: normal;
-}
-
-div[mathbox] hr[alpha]::before {
-    content: '\03B1';
-    font-style: normal;
-}
-
-div[mathbox] hr[beta]::before {
-    content: '\03B2';
-    font-style: normal;
-}
-
-div[mathbox] hr[lambda]::before {
-    content: '\03BB';
-    font-style: normal;
-}
-
-div[mathbox] hr[delta]::before {
-    content: '\2206';
-    font-style: normal;
-}
-
-hr[add] {
-    display: inline-block;
-}
-
-hr[add]::before {
-    content: '+';
-    float: left;
-    font-style: normal;
-}
-
-div[mathbox] > hr[add] {
-    border: none;
-    clear: none;
-    display: inline-block;
-    font-size: 1.5em;
-    font-style: italic;
-    height: 100px;
-    margin: 0;
-    padding-left: 3px;
-    padding-top: 35px;
-    position: relative;
-    width: auto;
-}
-
-hr[subtract] {
-    display: inline-block;
-}
-
-hr[subtract]::before {
-    content: '-';
-    float: left;
-    font-style: normal;
-}
-
-div[mathbox] > hr[subtract] {
-    border: none;
-    clear: none;
-    display: inline-block;
-    font-size: 1.5em;
-    font-style: italic;
-    height: 100px;
-    margin: 0;
-    padding-left: 3px;
-    padding-top: 35px;
-    position: relative;
-    width: auto;
-}
-
 div[matrix] {
     height: 100px;
     margin-left: 0;
@@ -1418,7 +1639,30 @@ div[matrix] {
     margin-right:5px;
     position: relative;
     width: auto;
+        min-width: 30px;
 }
+
+div[piecewise] {
+    height: 100px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-left:10px;
+    margin-right:5px;
+    position: relative;
+    width: auto;
+        min-width: 30px;
+}
+
+div[one]{
+  height: 30px;
+  margin-top:35px;
+  margin-bottom:35px;
+  display: inline-block;
+  width:auto;
+  position: relative;
+  padding-top: 4px;
+}
+
 
 div[two]{
   height: 50px;
@@ -1472,7 +1716,7 @@ div[matrix]::before{
     -webkit-margin-start: 0;
     -webkit-margin-end: 0;
     position: absolute;
-    top: -5px;
+    top: -7px;
     content: "";
     left: 0px;
 }
@@ -1489,7 +1733,7 @@ div[matrix]::after{
     -webkit-margin-start: 0;
     -webkit-margin-end: 0;
     position: absolute;
-    top: -5px;
+    top: -7px;
     content: "";
     right: 0px;
 }
@@ -1497,13 +1741,66 @@ div[matrix]::after{
 div[equation].white div[matrix]::before{
   border: 3px white solid;
   border-right: none;
-
 }
 
 div[equation].white div[matrix]::after{
   border: 3px white solid;
   border-left: none;
+}
 
+
+
+
+div[piecewise]::before{
+  display: block;
+    height: 100%;
+    left: 0px;
+    width: 10px;
+    font-weight: 100;
+    border: 3px black solid;
+    border-right: none;
+    border-radius:10px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius:0px;
+    -webkit-margin-before: 0em;
+    -webkit-margin-after: 0em;
+    -webkit-margin-start: 0;
+    -webkit-margin-end: 0;
+    position: absolute;
+    top: -7px;
+    content: "";
+    left: 0px;
+}
+
+div[piecewise]::after{
+  display: block;
+    height: 100%;
+    width: 10px;
+    font-weight: 100;
+    border: none;
+    border-left: none;
+    -webkit-margin-before: 0em;
+    -webkit-margin-after: 0em;
+    -webkit-margin-start: 0;
+    -webkit-margin-end: 0;
+    position: absolute;
+    content: "";
+    left: -5px;
+    top:40%;
+    width:5px;
+    height:5px;
+    background-color: black;
+
+}
+
+div[piecewise].white div[matrix]::before{
+  border: 3px white solid;
+  border-right: none;
+}
+
+div[piecewise].white div[matrix]::after{
+  border: 3px white solid;
+  border-left: none;
 }
 
 
@@ -1514,18 +1811,60 @@ div[matrix]> b{
   float:left;
   font-weight:300;
   text-align: center;
+    font-style: italic;
 }
 
 div[matrix] > b > a{
-  width:auto;
-  clear:both;
-  min-width:100%;
-  text-align:center;
-  display:block;
-  height: 25px;
+  clear: both;
+      min-width: 100%;
+      text-align: center;
+      display: block;
+      height: 25px;
+      width: auto;
+      padding-left: 8px;
+      padding-right: 8px;
+      box-sizing: border-box;
 }
 
 div[matrix] > b > hr{
+  width: auto;
+  clear: both;
+  text-align: center;
+  display: block;
+  min-width: 25px;
+  height: 1px;
+  display: inline-block;
+  float: none;
+  display: block;
+  top: -12px;
+  margin-top: 0px;
+  margin-bottom: 6px;
+}
+
+
+div[piecewise]> b{
+  min-width:25px;
+  height: 100%;
+  display:inline-block;
+  float:left;
+  font-weight:300;
+  text-align: center;
+    font-style: italic;
+}
+
+div[piecewise] > b > a{
+  clear: both;
+      min-width: 100%;
+      text-align: center;
+      display: block;
+      height: 25px;
+      width: auto;
+      padding-left: 8px;
+      padding-right: 8px;
+      box-sizing: border-box;
+}
+
+div[piecewise] > b > hr{
   width: auto;
   clear: both;
   text-align: center;
@@ -1603,4 +1942,559 @@ div[eight] > b > hr{
   top: -12px;
   margin-top: 0px;
   margin-bottom: 1.5px;
+}
+
+div[shaded] {
+    background-color:white  !important;
+}
+
+div[venn] {
+    display: inline-block;
+    height: 150px;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding-left: 9px;
+    padding-right: 9px;
+    position: relative;
+    border:1px white  solid;
+    width:180px;
+    margin-bottom:-50px;
+    margin-top:-78px;
+    background-color:rgba(241,111,92,1);
+}
+
+div[two]{
+
+}
+
+div[two]  > div[A]{
+    margin-top:35px;
+    margin-bottom:10px;
+    margin-left:10px;
+    width:80px;
+    height: 80px;
+    border-radius:100%;
+    border:2px white  solid;
+    float:left;
+    box-sizing: border-box;
+    overflow:hidden;
+    z-index:2;
+    background-color:rgba(241,111,92,1);
+    position: relative;
+}
+
+div[two]  > div[B]{
+    margin-top:35px;
+    margin-bottom:10px;
+    margin-left:10px;
+    width:80px;
+    float:left;
+    margin-left:-20px;
+    height: 80px;
+    border-radius:100%;
+    z-index:1;
+    border:2px white  solid;
+    box-sizing: border-box;
+    background-color:rgba(241,111,92,1);
+    position: relative;
+}
+
+div[two]  > div[A] > div[AB]{
+    margin-bottom:10px;
+    margin-left:58px;
+    width:80px;
+    margin-top:-2px;
+    height: 80px;
+    border-radius:100%;
+    border:2px white  solid;
+    float:left;
+    box-sizing: border-box;
+    background-color:rgba(241,111,92,1);
+
+}
+
+
+div[three]  > div[A]{
+    margin-top:10px;
+    margin-bottom:10px;
+    margin-left:10px;
+    width:80px;
+    height: 80px;
+    border-radius:100%;
+    border:2px white  solid;
+    float:left;
+    box-sizing: border-box;
+    overflow:hidden;
+    z-index:3;
+    background-color:rgba(241,111,92,1);
+    position: relative;
+}
+
+div[three]  > div[B]{
+    margin-top:10px;
+    margin-bottom:10px;
+    margin-left:10px;
+    width:80px;
+    float:left;
+    margin-left:-20px;
+    height: 80px;
+    border-radius:100%;
+    z-index:2;
+    border:2px white  solid;
+    box-sizing: border-box;
+    background-color:rgba(241,111,92,1);
+    overflow:hidden;
+    position: relative;
+}
+
+
+div[three]  > div[C]{
+    margin-top:10px;
+    margin-bottom:10px;
+    margin-left:10px;
+    width:80px;
+    float:left;
+    margin-left:-20px;
+    height: 80px;
+    border-radius:100%;
+    z-index:1;
+    z-index:1;
+    border:2px white  solid;
+    box-sizing: border-box;
+    background-color:rgba(241,111,92,1);
+    margin-top:-40px;
+    margin-left:39px;
+    position: relative;
+}
+
+div[three]  > div[A] > div[AB]{
+    margin-bottom:10px;
+    margin-left:58px;
+    width:80px;
+    margin-top:-2px;
+    height: 80px;
+    border-radius:100%;
+    border:2px white  solid;
+    float:left;
+    box-sizing: border-box;
+    z-index:2;
+    background-color:rgba(241,111,92,1);
+    position:relative;
+    overflow:hidden;
+}
+
+div[three]  > div[A] > div[AB] > div[ABC]{
+    margin-bottom:10px;
+    margin-left:-33px;
+    width:80px;
+    margin-top:49px;
+    height: 80px;
+    border-radius:100%;
+    border:2px white  solid;
+    float:left;
+    box-sizing: border-box;
+    z-index:2;
+    background-color:rgba(241,111,92,1);
+    position:relative;
+}
+
+
+
+div[three]  > div[A] > div[AC]{
+    margin-bottom:10px;
+    width:80px;
+    height: 80px;
+    border-radius:100%;
+    z-index:1;
+    position:relative;
+    margin-top:-39px;
+    margin-left:27px;
+    border:2px white  solid;
+    float:left;
+    box-sizing: border-box;
+    background-color:rgba(241,111,92,1);
+}
+
+
+div[three]  > div[B] > div[BC]{
+    margin-bottom:10px;
+    margin-left:-33px;
+    width:80px;
+    margin-top:49px;
+    height: 80px;
+    border-radius:100%;
+    border:2px white  solid;
+    float:left;
+    box-sizing: border-box;
+    z-index:2;
+    background-color:rgba(241,111,92,1);
+    position:relative;
+}
+
+div[four] * {
+    background-color: rgba(241,111,92,1) !important;
+    border-color: white !important;
+}
+
+div[four] div[shaded] {
+    background-color: white !important;
+}
+
+div[four]  > div[A]{
+    margin-top:15px;
+    margin-bottom:10px;
+    margin-left:15px;
+    width:80px;
+    height: 80px;
+    border-radius:100%;
+    border:2px black solid;
+    float:left;
+    box-sizing: border-box;
+    overflow:hidden;
+    z-index:4;
+    background-color:transparent;
+    position: relative;
+}
+
+div[four]  > div[B]{
+    margin-top:15px;
+    margin-bottom:10px;
+    margin-left:15px;
+    width:80px;
+    float:left;
+    margin-left:-30px;
+    height: 80px;
+    border-radius:100%;
+    z-index:2;
+    border:2px black solid;
+    box-sizing: border-box;
+    background-color:transparent;
+    overflow:hidden;
+    position: relative;
+}
+
+div[four]  > div[B] > div[BC]{
+    margin-bottom:10px;
+    margin-left:40px;
+    width:80px;
+    margin-top:-177px;
+    height: 80px;
+    border-radius:100%;
+    border:2px black solid;
+    float:left;
+    box-sizing: border-box;
+    z-index:2;
+    background-color:white;
+    position:relative;
+    overflow:hidden;
+}
+
+
+
+div[four]  > div[C]{
+    margin-top:10px;
+    margin-bottom:10px;
+    width:80px;
+    float:left;
+    height: 80px;
+    border-radius:100%;
+    z-index:3;
+    border:2px black solid;
+    box-sizing: border-box;
+    background-color:transparent;
+    margin-top:-50px;
+    margin-left:15px;
+    position: relative;
+    overflow:hidden;
+}
+
+div[four]  > div[E]{
+    margin-top:-50px;
+    margin-bottom:10px;
+    margin-left:10px;
+    width:80px;
+    float:left;
+    margin-left:-30px;
+    height: 80px;
+    border-radius:100%;
+    z-index:1;
+    border:2px black solid;
+    box-sizing: border-box;
+    background-color:transparent;
+    overflow:hidden;
+    position: relative;
+    background-color:white;
+
+}
+
+div[four]  > div[A] > div[AB]{
+    margin-bottom:10px;
+    margin-left:48px;
+    width:80px;
+    margin-top:-2px;
+    height: 80px;
+    border-radius:100%;
+    border:2px black solid;
+    float:left;
+    box-sizing: border-box;
+    z-index:2;
+    background-color:white;
+    position:relative;
+    overflow:hidden;
+}
+
+
+div[four]  > div[A] > div[AE]{
+    margin-bottom:10px;
+    margin-left:-43px;
+    width:80px;
+    margin-top:-177px;
+    height: 80px;
+    border-radius:100%;
+    border:2px black solid;
+    float:left;
+    box-sizing: border-box;
+    z-index:2;
+    background-color:white;
+    position:relative;
+    overflow:hidden;
+}
+
+div[four]  > div[E] > div[AE]{
+    margin-bottom:10px;
+    margin-left:38px;
+    width:80px;
+    margin-top:45px;
+    height: 80px;
+    border-radius:100%;
+    border:2px black solid;
+    float:left;
+    box-sizing: border-box;
+    z-index:2;
+    background-color:white;
+    position:relative;
+    overflow:hidden;
+}
+
+
+div[four]  > div[A] > div[AB] > div[ABC]{
+    margin-left:-52px;
+    margin-top:38px;
+    height: 80px;
+
+
+    width:80px;
+    border-radius:100%;
+    border:2px black solid;
+    float:left;
+    box-sizing: border-box;
+    z-index:2;
+    background-color:white;
+    position:relative;
+    overflow:hidden;
+}
+
+div[four]  > div[A] > div[AB] > div[ABC] > div[ABCE]{
+    margin-left:48px;
+    margin-top:-2px;
+    height: 80px;
+
+
+    width:80px;
+    border-radius:100%;
+    border:2px black solid;
+    float:left;
+    box-sizing: border-box;
+    z-index:2;
+    background-color:white;
+    position:relative;
+    overflow:hidden;
+}
+
+div[four]  > div[A] > div[AB] > div[ABE]{
+    margin-left:-2px;
+    margin-top:-80px;
+
+
+    height: 80px;
+    width:80px;
+    border-radius:100%;
+    border:2px black solid;
+    float:left;
+    box-sizing: border-box;
+    z-index:1;
+    background-color:white;
+    position:relative;
+    overflow:hidden;
+}
+
+
+
+
+div[four]  > div[A] > div[AC]{
+    margin-bottom:10px;
+    width:80px;
+    height: 80px;
+    border-radius:100%;
+    z-index:1;
+    position:relative;
+    margin-top:-50px;
+    margin-left:-2px;
+    border:2px black solid;
+    float:left;
+    box-sizing: border-box;
+    background-color:white;
+}
+
+
+div[four]  > div[A] > div[AC] > div[ACE]{
+    margin-left:48px;
+    margin-top:-2px;
+    height: 80px;
+    width:80px;
+    border-radius:100%;
+    border:2px black solid;
+    float:left;
+    box-sizing: border-box;
+    z-index:1;
+    background-color:white;
+    position:relative;
+    overflow:hidden;
+}
+
+div[four]  > div[C] > div[CE]{
+    margin-bottom:10px;
+    margin-left:48px;
+    width:80px;
+    margin-top:-2px;
+    height: 80px;
+    border-radius:100%;
+    border:2px black solid;
+    float:left;
+    box-sizing: border-box;
+    z-index:2;
+    background-color:white;
+    position:relative;
+    overflow:hidden;
+}
+
+div[four]  > div[C] > div[CE] > div[BCE]{
+    margin-left:-2px;
+    margin-top:-42px;
+    height: 80px;
+    width:80px;
+    border-radius:100%;
+    border:2px black solid;
+    float:left;
+    box-sizing: border-box;
+    z-index:1;
+    background-color:white;
+    position:relative;
+    overflow:hidden;
+}
+
+
+div[four]  > div[B] > div[BE]{
+    margin-bottom:10px;
+    width:80px;
+    height: 80px;
+    border-radius:100%;
+    z-index:1;
+    position:relative;
+    margin-top:38px;
+    margin-left:-2px;
+    border:2px black solid;
+    float:left;
+    box-sizing: border-box;
+    background-color:white;
+}
+
+
+
+div[four]  > div[C] > div[BC]{
+    margin-bottom:10px;
+    margin-left:-41px;
+    width:80px;
+    margin-top:-42px;
+    height: 80px;
+    border-radius:100%;
+    border:2px black solid;
+    float:left;
+    box-sizing: border-box;
+    z-index:2;
+    background-color:white;
+    position:relative;
+    overflow:hidden;
+}
+
+span[hat]{
+  float:none;
+  position:relative;
+}
+
+span[hat]::before{
+  content:'^';
+  text-align: center;
+  position:absolute;
+  top:-7px;
+  color:black;
+  width:100%;
+  border-bottom:0px black solid;
+}
+
+.white span[hat]::before{
+  color:white;
+}
+
+span[vector]{
+  float:none;
+  position:relative;
+}
+
+span[vector]::before{
+  content:'\2192';
+  float:right;
+  color:black;
+  position:absolute;
+  top:1px;
+  width:100%;
+  font-size:.5em;
+
+
+}
+
+div[modification]{
+  height: 75px;
+margin-top: 12.5px;
+margin-bottom: 12.5px;
+display: inline-block;
+width: auto;
+position: relative;
+min-width: 20px;
+}
+
+.white span[vector]::before{
+  color:white;
+}
+
+div[modification]> b{
+  min-width:25px;
+  height: 100%;
+  display:inline-block;
+  float:left;
+  font-weight:300;
+  text-align: center;
+    font-style: italic;
+}
+
+div[modification] > b > a{
+  clear: both;
+      min-width: 100%;
+      text-align: left;
+      display: block;
+      height: 25px;
+      width: auto;
+      padding-left: 8px;
+      padding-right: 8px;
+      box-sizing: border-box;
 }

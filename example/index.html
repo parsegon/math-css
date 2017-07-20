@@ -6,6 +6,21 @@
 </head>
 <body>
     <div equation>
+
+      <div piecewise three>
+          <b>
+            <a>6x + 12</a>
+            <a>6x<sup>2</sup> + 12</a>
+            <a>2x</a>
+
+          </b>
+          <b>
+            <a>3 < x < 4</a>
+            <a>x < 3</a>
+            <a>x > 4</a>
+          </b>
+      </div>
+
         <div integral>
             <div upperbound>
                 5x<sup>2</sup> + 98
@@ -14,7 +29,7 @@
                 39x
             </div>
             <div of>
-                35x + 45 + 23
+                <span absolute>35x + 45 + 23</span>
             </div>
         </div>
 
@@ -97,11 +112,8 @@
         <hr add>
 
         <div doubleintegral>
-            <div upperbound>
-                5y
-            </div>
-            <div lowerbound>
-                3y
+            <div region>
+                D
             </div>
             <div of>
                 35y<sup>78</sup> + 45
@@ -116,6 +128,9 @@
             </div>
             <div lowerbound>
                 39x
+            </div>
+            <div region>
+                D
             </div>
             <div of>
                 35x + 45
@@ -475,7 +490,7 @@
               25
             </b>
         </div>
-        
+
         <hr add>
 
         <div choose>
@@ -486,6 +501,63 @@
                 3
             </div>
         </div>
+    </div>
+
+
+    <div equation>
+
+
+        <div venn two>
+            <div A shaded>
+                <div AB></div>
+            </div>
+            <div B shaded></div>
+        </div>
+
+
+        <div venn three>
+            <div A>
+                <div AB shaded>
+                    <div ABC shaded></div>
+                </div>
+                <div AC></div>
+            </div>
+            <div B>
+                <div BC shaded></div>
+            </div>
+            <div C></div>
+        </div>
+
+
+        <div venn four>
+            <div A>
+                <div AB>
+                    <div ABC>
+                        <div ABCD></div>
+                    </div>
+                    <div ABD></div>
+                </div>
+                <div AC>
+                    <div ACD></div>
+                </div>
+                <div AD></div>
+            </div>
+            <div B>
+                <div BD></div>
+                <div BC></div>
+            </div>
+            <div C>
+                <div CD>
+                    <div BCD></div>
+                </div>
+                <div BC></div>
+            </div>
+            <div D>
+                <div AD></div>
+            </div>
+        </div>
+
+
     </div>
 </body>
 </html>
