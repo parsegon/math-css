@@ -33,7 +33,7 @@ div[equation] {
     margin: 0px auto 0;
     min-height: 100px;
     width: 80%;
-    font-family:'stixgeneralregular';
+    font-family:'Times New Roman';
 }
 
 *[absolute] {
@@ -823,7 +823,7 @@ div[choose]::before{
     content: "(";
     font-size:3em;
     left: -7px;
-    font-family:'stixgeneralregular', sans-serif;
+    Times New Roman:'Times New Roman', sans-serif;
 }
 
 div[choose]::after{
@@ -839,7 +839,7 @@ div[choose]::after{
     top: 21px;
     content: ")";
     font-size:3em;
-        font-family:'stixgeneralregular', sans-serif;
+        Times New Roman:'Times New Roman', sans-serif;
     right: -5px;
 }
 
@@ -1080,7 +1080,7 @@ div[equation] hr[natural]::before{
 div[equation] hr[rational]::before{
     content: '\211A';
     font-style:normal;
-    font-family:'stixgeneralregular', Times;
+    Times New Roman:'Times New Roman', Times;
 }
 
 div[equation] hr[pm]::before {
