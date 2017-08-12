@@ -162,15 +162,16 @@ div[limit] {
 div[integral]::before {
     content: '\222b';
     float: left;
-    font-size: 5em;
     font-family:"KaTeX";
+    font-size: 2rem;
+    line-height: 100px;
 }
 
 div[integral] > div[upperbound] {
     font-size: 1em;
     font-style: italic;
     height: 25%;
-    padding-left: 40px;
+    padding-left: 35px;
     position: absolute;
     top: 8px;
     width: auto;
@@ -180,7 +181,7 @@ div[integral] > div[lowerbound] {
     font-size: 1em;
     font-style: italic;
     height: auto;
-    padding-left: 30px;
+    padding-left: 15px;
     position: absolute;
     top: 75px;
     width: auto;
@@ -199,8 +200,10 @@ div[integral] > div[of] {
 div[contourintegral]::before {
     content: '\222E';
     float: left;
-    font-size: 5em;
-    margin-top: -8px;
+    font-size: 2rem;
+    font-family: "KaTeX";
+    line-height: 100px;
+    margin-right: 15px;
 }
 
 div[root] {
@@ -263,7 +266,7 @@ div[contourintegral] > div[upperbound] {
     font-size: 1em;
     font-style: italic;
     height: 25%;
-    padding-left: 47px;
+    padding-left: 35px;
     position: absolute;
     top: 8px;
     width: auto;
@@ -274,9 +277,9 @@ div[contourintegral] > div[lowerbound] {
     font-size: 1em;
     font-style: italic;
     height: auto;
-    padding-left: 30px;
+    padding-left: 15px;
     position: absolute;
-    top: 65px;
+    top: 75px;
     width: auto;
     min-width:70px;
 }
@@ -464,14 +467,16 @@ div[volumeintegral] > div[of] {
 div[tripleintegral]::before {
     content: '\222b \222b \222b';
     float: left;
-    font-size: 5em;
+    font-size: 2rem;
+    font-family: "KaTeX";
+    line-height: 100px;
 }
 
 div[tripleintegral] > div[upperbound] {
     font-size: 1em;
     font-style: italic;
     height: 25%;
-    padding-left: 86px;
+    padding-left: 70px;
     position: absolute;
     top: 8px;
     width: auto;
@@ -481,7 +486,7 @@ div[tripleintegral] > div[lowerbound] {
     font-size: 1em;
     font-style: italic;
     height: auto;
-    padding-left: 70px;
+    padding-left: 50px;
     position: absolute;
     top: 75px;
     width: auto;
@@ -555,7 +560,9 @@ div[limit] > div[of] {
 div[summation]::before {
     content: '\2211';
     float: left;
-    font-size: 5em;
+    font-size: 2rem;
+    font-family: "KaTex";
+    line-height: 100px;
 }
 
 div[summation] > div[upperbound] {
@@ -564,9 +571,9 @@ div[summation] > div[upperbound] {
     height: 25%;
     position: absolute;
     text-align: center;
-    top: 2px;
+    top: 8px;
     width: 50px;
-    left:0px;
+    left:-3px;
 }
 
 div[summation] > div[lowerbound] {
@@ -575,9 +582,9 @@ div[summation] > div[lowerbound] {
     height: auto;
     position: absolute;
     text-align: center;
-    top: 82px;
+    top: 74px;
     width: 45px;
-    left:0px;
+    left:-3px;
 }
 
 div[summation] > div[of] {
@@ -604,8 +611,10 @@ div[product] {
 div[product]::before {
     content: '\03A0 ';
     float: left;
-    font-size: 5em;
+    font-size: 4rem;
     padding-top: 5px;
+    font-family: "KaTeX";
+    line-height: 100px;
 }
 
 div[product] > div[upperbound] {
@@ -614,7 +623,8 @@ div[product] > div[upperbound] {
     height: 25%;
     position: absolute;
     text-align: center;
-    top: 4px;
+    top: 8px;
+    left: 0px;
     width: 65px;
 }
 
@@ -624,7 +634,8 @@ div[product] > div[lowerbound] {
     height: auto;
     position: absolute;
     text-align: center;
-    top: 80px;
+    top: 72px;
+    left: 0px;
     width: 65px;
 }
 
