@@ -17,6 +17,15 @@
 }
 
 
+@font-face {
+    font-family: 'KaTeX';
+    src: url('./vendor/KaTeX_Size2-Regular.woff2') format('woff2'),
+         url('./vendor/KaTeX_Size2-Regular.woff') format('woff');
+    font-weight: italic;
+    font-style: italic;
+}
+
+
 
 
 /*
@@ -154,6 +163,7 @@ div[integral]::before {
     content: '\222b';
     float: left;
     font-size: 5em;
+    font-family:"KaTeX";
 }
 
 div[integral] > div[upperbound] {
