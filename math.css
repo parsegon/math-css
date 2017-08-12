@@ -447,7 +447,9 @@ div[tripleintegral] > div[lowerboundthree] {
 div[bigintersect]::before {
     content: '\22C2';
     float: left;
-    font-size: 5em;
+    font-size: 2em;
+    font-family: "KaTex";
+    line-height: 100px;
 }
 
 div[bigintersect] > div[upperbound] {
@@ -456,27 +458,21 @@ div[bigintersect] > div[upperbound] {
     height: 25%;
     position: absolute;
     text-align: center;
-    top: 2px;
+    top: 8px;
     width: 50px;
-    left:0px;
-    left: 0px;
-min-width: 75px;
+    left:-8px;
 }
 
 div[bigintersect] > div[lowerbound] {
-  font-size: 1em;
+      font-size: 1em;
       font-style: italic;
       height: auto;
       position: absolute;
       text-align: center;
-      top: 72px;
-      width: 45px;
-      left: 0px;
-      width: 39px;
-      left: 17px;
+      top: 74px;
       max-width: 39px;
       min-width: 48px;
-      left: 12px;
+      left: 2px;
 }
 
 div[bigintersect] > div[of] {
@@ -492,7 +488,9 @@ div[bigintersect] > div[of] {
 div[bigunion]::before {
     content: '\22C3';
     float: left;
-    font-size: 5em;
+    font-size: 2em;
+    font-family: "KaTex";
+    line-height: 100px;
 }
 
 div[bigunion] > div[upperbound] {
@@ -501,27 +499,21 @@ div[bigunion] > div[upperbound] {
     height: 25%;
     position: absolute;
     text-align: center;
-    top: 2px;
+    top: 8px;
     width: 50px;
-    left:0px;
-    left: 0px;
-min-width: 75px;
+    left: -8px;
 }
 
 div[bigunion] > div[lowerbound] {
-  font-size: 1em;
+      font-size: 1em;
       font-style: italic;
       height: auto;
       position: absolute;
       text-align: center;
-      top: 72px;
-      width: 45px;
-      left: 0px;
-      width: 39px;
-      left: 17px;
+      top: 74px;
       max-width: 39px;
       min-width: 48px;
-      left: 12px;
+      left: 2px;
 }
 
 div[bigunion] > div[of] {
