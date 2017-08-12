@@ -203,7 +203,7 @@ div[contourintegral]::before {
     font-size: 2rem;
     font-family: "KaTeX";
     line-height: 100px;
-    margin-right: 15px;
+
 }
 
 div[root] {
@@ -217,7 +217,7 @@ div[root] {
     width: auto;
     margin-top:30px;
     padding-top: 10px;
-    border-top:2px black solid;
+    border-top:1px black solid;
 }
 
 div[equation].white > div[root]{
@@ -231,9 +231,10 @@ div[equation].red > div[root]{
 div[root]::before {
     content: '\221A';
     float: left;
-    font-size: 2.5em;
-    margin-top: -10px;
-    margin-left:-25px;
+    font-size: 1.1rem;
+    margin-top: -15px;
+    margin-left: -18px;
+    font-family: "KaTeX";
 }
 
 div[root] > div[of] {
@@ -248,8 +249,8 @@ div[root] > div[of] {
 
 div[root] > div[degree] {
     position:absolute;
-    top:6px;
-    left:-17px;
+    top:1px;
+    left:-15px;
 }
 
 
@@ -290,7 +291,7 @@ div[contourintegral] > div[of] {
     font-style: italic;
     height: 25px;
     margin-top: 1.5em;
-    padding-left: 0;
+    padding-left: 18px;
     width: auto;
 }
 
@@ -336,14 +337,17 @@ div[vector]::after{
 div[doubleintegral]::before {
     content: '\222b \222b';
     float: left;
-    font-size: 5em;
+    font-size: 2rem;
+    font-family: "KaTeX";
+    line-height: 100px;
+    margin-right: -2px;
 }
 
 div[doubleintegral] > div[upperbound] {
     font-size: 1em;
     font-style: italic;
     height: 25%;
-    padding-left: 62px;
+    padding-left: 52px;
     position: absolute;
     top: 8px;
     width: auto;
@@ -353,7 +357,7 @@ div[doubleintegral] > div[lowerbound] {
     font-size: 1em;
     font-style: italic;
     height: auto;
-    padding-left: 50px;
+    padding-left: 32px;
     position: absolute;
     top: 75px;
     width: auto;
@@ -363,10 +367,12 @@ div[integral] > div[region] {
     font-size: 1.3em;
     font-style: italic;
     height: auto;
-    padding-left: 2.5px;
+    margin-left: -5px;
     position: absolute;
-    top: 85px;
-    width: auto;
+    top: 88px;
+    width: 35px;
+    text-align: center;
+    margin-left: -15px;
 }
 
 
@@ -374,10 +380,12 @@ div[doubleintegral] > div[region] {
     font-size: 1.3em;
     font-style: italic;
     height: auto;
-    padding-left: 12.5px;
+    padding-left: 5px;
     position: absolute;
     top: 85px;
-    width: auto;
+    margin-left: -10px;
+    width: 45px;
+    text-align: center;
 }
 
 div[doubleintegral] > div[of] {
@@ -391,19 +399,34 @@ div[doubleintegral] > div[of] {
 }
 
 div[surfaceintegral]::before {
-    content: '\222F';
+    content: '\222b \222b';
     float: left;
-    font-size: 5em;
-    margin-top: -8px;
+    font-size: 2rem;
+    font-family: "KaTeX";
+    line-height: 100px;
+    margin-right: -2px;
+}
+
+div[surfaceintegral]::after {
+    content: '';
+    float: left;
+    font-family: "KaTeX";
+    position: absolute;
+    width: 35px;
+    height: 30px;
+    border: 1px solid black;
+    border-radius: 20px;
+    top: 34px;
+    left: 16px;
 }
 
 div[surfaceintegral] > div[upperbound] {
     font-size: 1em;
     font-style: italic;
     height: 25%;
-    padding-left: 72px;
+    padding-left: 52px;
     position: absolute;
-    top: 3px;
+    top: 8px;
     width: auto;
 }
 
@@ -411,9 +434,9 @@ div[surfaceintegral] > div[lowerbound] {
     font-size: 1em;
     font-style: italic;
     height: auto;
-    padding-left: 50px;
+    padding-left: 32px;
     position: absolute;
-    top: 65px;
+    top: 75px;
     width: auto;
 }
 
@@ -423,24 +446,38 @@ div[surfaceintegral] > div[of] {
     font-style: italic;
     height: 25%;
     margin-top: 1.5em;
-    padding-left: 0;
+    padding-left: 18px;
     width: auto;
 }
 
 div[volumeintegral]::before {
-    content: '\2230';
+    content: '\222b \222b \222b';
     float: left;
-    font-size: 5em;
-    margin-top: -8px;
+    font-size: 2rem;
+    font-family: "KaTeX";
+    line-height: 100px;
+}
+
+div[volumeintegral]::after {
+    content: '';
+    float: left;
+    font-family: "KaTeX";
+    position: absolute;
+    width: 51px;
+    height: 30px;
+    border: 1px solid black;
+    border-radius: 30px;
+    top: 34px;
+    left: 16px;
 }
 
 div[volumeintegral] > div[upperbound] {
     font-size: 1em;
     font-style: italic;
     height: 25%;
-    padding-left: 92px;
+    padding-left: 70px;
     position: absolute;
-    top: 3px;
+    top: 8px;
     width: auto;
 }
 
@@ -448,9 +485,9 @@ div[volumeintegral] > div[lowerbound] {
     font-size: 1em;
     font-style: italic;
     height: auto;
-    padding-left: 75px;
+    padding-left: 50px;
     position: absolute;
-    top: 65px;
+    top: 75px;
     width: auto;
 }
 
@@ -460,7 +497,7 @@ div[volumeintegral] > div[of] {
     font-style: italic;
     height: 25%;
     margin-top: 1.5em;
-    padding-left: 0;
+    padding-left: 18px;
     width: auto;
 }
 
@@ -496,10 +533,10 @@ div[tripleintegral] > div[region] {
     font-size: 1.3em;
     font-style: italic;
     height: auto;
-    padding-left: 25px;
     position: absolute;
-    top: 85px;
-    width: auto;
+    top: 88px;
+    text-align: center;
+    width: 40px;
 }
 
 
