@@ -298,6 +298,38 @@ div[root] > div[of] {
     width: auto;
 }
 
+div[root] > div[of] > div[root] {
+    margin-top: 0;
+    float: none;
+    font-size: 0.8rem;
+}
+div[root] > div[of] > div[root] > div[of] > div[root] {
+    margin-top: 0;
+    float: none;
+    font-size: 0.6rem;
+}
+
+div[root] > div[of] > div[root]::before {
+    font-size: 1rem;
+    margin-left: -16px;
+    margin-top: -14px;
+}
+
+div[root] > div[of] > div[root] > div[of] > div[root]::before {
+    font-size: 0.85rem;
+    margin-left: -13px;
+    margin-top: -13px;
+}
+
+
+div[root] > div[of] > div[root] > div[degree] {
+    font-style: normal;
+    left: -11px;
+}
+div[root] > div[of] > div[root] >  div[of] > div[root] > div[degree] {
+    left: -9px;
+}
+
 div[root] > div[degree] {
     position:absolute;
     top:1px;
