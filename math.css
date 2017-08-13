@@ -334,6 +334,7 @@ div[root] > div[degree] {
     position:absolute;
     top:1px;
     left:-15px;
+    font-style: normal !important;
 }
 
 
@@ -1001,6 +1002,25 @@ div[fraction] > div[top] {
         float:none;
 }
 
+/* Fractional Root Styles */
+div[fraction] > div[top] > div[root] {
+    vertical-align: middle;
+    float: none;
+    margin-top: -70px;
+    margin-bottom: -60px;
+}
+
+div[fraction] > div[bottom] > div[root] {
+    margin-top: 5px;
+    float: none;
+    vertical-align: middle;
+}
+
+div[fraction] > div[top] > div[root] > div[degree],
+div[fraction] > div[bottom] > div[root] > div[degree] {
+    font-size: 1rem;
+}
+
 div[fraction] > div[top] > div[integral],
 div[fraction] > div[top] > div[doubleintegral],
 div[fraction] > div[top] > div[contourintegral],
@@ -1054,6 +1074,8 @@ div[fraction] > div[bottom] > div[product]::before {
 
 /* Integration bounds */
 div[fraction] > div[top] > div[integral] > div[region],
+div[fraction] > div[bottom] > div[integral] > div[region],
+div[fraction] > div[top] > div[integral] > div[region],
 div[fraction] > div[bottom] > div[integral] > div[region] {
     top: 50px;
     font-size: 0.3rem;
@@ -1084,6 +1106,44 @@ div[fraction] > div[bottom] > div[integral] > div[upperbound] > div[fraction]{
 
 div[fraction] > div[top] > div[integral] > div[lowerbound] > div[fraction],
 div[fraction] > div[bottom] > div[integral] > div[lowerbound] > div[fraction] {
+    font-size: 0.3rem;
+    margin-left: -5px;
+    height: 20px;
+}
+/* DoubleIntegration bounds */
+div[fraction] > div[top] > div[doubleintegral] > div[region],
+div[fraction] > div[bottom] > div[doubleintegral] > div[region],
+div[fraction] > div[top] > div[doubleintegral] > div[region],
+div[fraction] > div[bottom] > div[doubleintegral] > div[region] {
+    top: 50px;
+    font-size: 0.3rem;
+}
+
+div[fraction] > div[top] > div[doubleintegral] > div[upperbound],
+div[fraction] > div[bottom] > div[doubleintegral] > div[upperbound] {
+    font-size: 0.5rem;
+    margin-left: -12px;
+    padding-left: 0;
+}
+
+div[fraction] > div[top] > div[doubleintegral] > div[lowerbound],
+div[fraction] > div[bottom] > div[doubleintegral] > div[lowerbound] {
+    font-size: 0.5rem;
+    margin-left: -22px;
+    padding-left: 0;
+    top: 40px;
+}
+
+div[fraction] > div[top] > div[doubleintegral] > div[upperbound] > div[fraction],
+div[fraction] > div[bottom] > div[doubleintegral] > div[upperbound] > div[fraction]{
+    font-size: 0.3rem;
+    margin-top: -5px;
+    margin-left: 30px;
+    height: 20px;
+}
+
+div[fraction] > div[top] > div[doubleintegral] > div[lowerbound] > div[fraction],
+div[fraction] > div[bottom] > div[doubleintegral] > div[lowerbound] > div[fraction] {
     font-size: 0.3rem;
     margin-left: -5px;
     height: 20px;
@@ -1295,9 +1355,10 @@ div[choose]::before{
     position: absolute;
     top: 21px;
     content: "(";
-    font-size:3em;
+    font-size:1.7em;
     left: -7px;
-    Times New Roman:'Times New Roman', sans-serif;
+    font-family: "KaTeX";
+    
 }
 
 div[choose]::after{
@@ -1312,9 +1373,9 @@ div[choose]::after{
     position: absolute;
     top: 21px;
     content: ")";
-    font-size:3em;
-        Times New Roman:'Times New Roman', sans-serif;
-    right: -5px;
+    font-size: 1.7em;
+    right: -4px;
+    font-family: "KaTeX";
 }
 
 .white div[choose]::before{
