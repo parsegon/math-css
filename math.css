@@ -416,7 +416,7 @@ div[doubleintegral] > div[upperboundtwo] {
 }
 
 div[doubleintegral] > div[lowerbound],
-div[doubleintegral] > div[lowerbound2] {
+div[doubleintegral] > div[lowerboundtwo] {
     font-size: 1em;
     font-style: italic;
     height: auto;
@@ -426,7 +426,7 @@ div[doubleintegral] > div[lowerbound2] {
     width: auto;
 }
 
-div[doubleintegral] > div[lowerbound2] {
+div[doubleintegral] > div[lowerboundtwo] {
     padding-left: 12px;
 }
 
@@ -762,8 +762,8 @@ div[tripleintegral] > div[upperboundthree] {
 }
 
 div[tripleintegral] > div[lowerbound],
-div[tripleintegral] > div[lowerbound2],
-div[tripleintegral] > div[lowerbound3] {
+div[tripleintegral] > div[lowerboundtwo],
+div[tripleintegral] > div[lowerboundthree] {
     font-size: 1em;
     font-style: italic;
     height: auto;
@@ -773,11 +773,11 @@ div[tripleintegral] > div[lowerbound3] {
     width: auto;
 }
 
-div[tripleintegral] > div[lowerbound2] {
+div[tripleintegral] > div[lowerboundtwo] {
     margin-left: 10px;
 }
 
-div[tripleintegral] > div[lowerbound3] {
+div[tripleintegral] > div[lowerboundthree] {
     margin-left: 35px;
 }
 
