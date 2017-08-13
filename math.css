@@ -259,6 +259,7 @@ div[contourintegral]::before {
 
 div[root] {
     display: inline-block;
+    vertical-align: top;
     height: 60px;
     margin-left: 29px;
     margin-right: 0;
