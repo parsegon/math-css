@@ -164,7 +164,6 @@ div[fraction],
 div[bigunion],
 div[bigintersect],
 div[choose],
-div[contourintegral],
 div[limit] {
     display: inline-block;
     height: 100px;
@@ -1000,6 +999,138 @@ div[fraction] > div[top] {
     width: 100%;
     clear:both;
         float:none;
+}
+
+div[fraction] > div[top] > div[integral],
+div[fraction] > div[top] > div[doubleintegral],
+div[fraction] > div[top] > div[contourintegral],
+div[fraction] > div[top] > div[surfaceintegral],
+div[fraction] > div[top] > div[volumeintegral],
+div[fraction] > div[top] > div[tripleintegral],
+div[fraction] > div[top] > div[summation],
+div[fraction] > div[top] > div[product] {
+    float: none;
+    margin-top: -40px;
+    font-size: 0.6rem;
+    vertical-align: middle;
+    height: 60px;
+}
+
+
+div[fraction] > div[bottom] > div[integral],
+div[fraction] > div[bottom] > div[doubleintegral],
+div[fraction] > div[bottom] > div[contourintegral],
+div[fraction] > div[bottom] > div[surfaceintegral],
+div[fraction] > div[bottom] > div[volumeintegral],
+div[fraction] > div[bottom] > div[tripleintegral],
+div[fraction] > div[bottom] > div[summation],
+div[fraction] > div[bottom] > div[product] {
+    float: none;
+    font-size: 0.6rem;
+    vertical-align: middle;
+    height: 60px;
+}
+
+div[fraction] > div[top] > div[integral]::before,
+div[fraction] > div[top] > div[doubleintegral]::before,
+div[fraction] > div[top] > div[contourintegral]::before,
+div[fraction] > div[top] > div[surfaceintegral]::before,
+div[fraction] > div[top] > div[volumeintegral]::before,
+div[fraction] > div[top] > div[tripleintegral]::before,
+div[fraction] > div[top] > div[summation]::before,
+div[fraction] > div[top] > div[product]::before,
+div[fraction] > div[bottom] > div[integral]::before,
+div[fraction] > div[bottom] > div[doubleintegral]::before,
+div[fraction] > div[bottom] > div[contourintegral]::before,
+div[fraction] > div[bottom] > div[surfaceintegral]::before,
+div[fraction] > div[bottom] > div[volumeintegral]::before,
+div[fraction] > div[bottom] > div[tripleintegral]::before,
+div[fraction] > div[bottom] > div[summation]::before,
+div[fraction] > div[bottom] > div[product]::before {
+    font-size: 1rem;
+    line-height: 60px;
+    font-style: normal !important;
+}
+
+/* Integration bounds */
+div[fraction] > div[top] > div[integral] > div[region],
+div[fraction] > div[bottom] > div[integral] > div[region] {
+    top: 50px;
+    font-size: 0.3rem;
+}
+
+div[fraction] > div[top] > div[integral] > div[upperbound],
+div[fraction] > div[bottom] > div[integral] > div[upperbound] {
+    font-size: 0.5rem;
+    margin-left: -12px;
+    padding-left: 0;
+}
+
+div[fraction] > div[top] > div[integral] > div[lowerbound],
+div[fraction] > div[bottom] > div[integral] > div[lowerbound] {
+    font-size: 0.5rem;
+    margin-left: -22px;
+    padding-left: 0;
+    top: 40px;
+}
+
+div[fraction] > div[top] > div[integral] > div[upperbound] > div[fraction],
+div[fraction] > div[bottom] > div[integral] > div[upperbound] > div[fraction]{
+    font-size: 0.3rem;
+    margin-top: -5px;
+    margin-left: 30px;
+    height: 20px;
+}
+
+div[fraction] > div[top] > div[integral] > div[lowerbound] > div[fraction],
+div[fraction] > div[bottom] > div[integral] > div[lowerbound] > div[fraction] {
+    font-size: 0.3rem;
+    margin-left: -5px;
+    height: 20px;
+}
+
+/* Product Bounds */
+div[fraction] > div[top] > div[product]::before,
+div[fraction] > div[bottom] > div[product]::before {
+    font-size: 2rem;
+}
+
+div[fraction] > div[top] > div[product] > div[upperbound],
+div[fraction] > div[bottom] > div[product] > div[upperbound] {
+    font-size: 0.5rem;
+    margin-left: -12px;
+    padding-left: 0;
+    top: 10px;
+}
+
+div[fraction] > div[top] > div[product] > div[lowerbound],
+div[fraction] > div[bottom] > div[product] > div[lowerbound] {
+    font-size: 0.5rem;
+    margin-left: -13px;
+    padding-left: 0;
+    top: 45px;
+}
+
+/* Summation Bounds */
+div[fraction] > div[top] > div[summation]::before,
+div[fraction] > div[bottom] > div[summation]::before {
+    padding-top: 2px;
+}
+
+div[fraction] > div[top] > div[summation] > div[upperbound],
+div[fraction] > div[bottom] > div[summation] > div[upperbound] {
+    font-size: 0.5rem;
+    margin-left: -12px;
+    padding-left: 0;
+    top: 10px;
+}
+
+div[fraction] > div[top] > div[summation] > div[lowerbound],
+div[fraction] > div[bottom] > div[summation] > div[lowerbound] {
+    font-size: 0.5rem;
+    margin-left: -13px;
+    padding-left: 0;
+    top: 45px;
 }
 
 div[equation].white div[fraction] > div[top]{
