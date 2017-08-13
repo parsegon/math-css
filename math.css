@@ -364,8 +364,14 @@ div[doubleintegral]::before {
     margin-right: -2px;
 }
 
-div[doubleintegral] > div[upperbound], 
-div[doubleintegral] > div[upperbound2] {
+
+div[equation] span[static]{
+  font-style:normal;
+  float:none;
+}
+
+div[doubleintegral] > div[upperbound],
+div[doubleintegral] > div[upperboundtwo] {
     font-size: 1em;
     font-style: italic;
     height: 25%;
@@ -375,7 +381,7 @@ div[doubleintegral] > div[upperbound2] {
     width: auto;
 }
 
-div[doubleintegral] > div[upperbound2] {
+div[doubleintegral] > div[upperboundtwo] {
     padding-left: 40px;
 }
 
@@ -706,8 +712,8 @@ div[tripleintegral]::before {
 }
 
 div[tripleintegral] > div[upperbound],
-div[tripleintegral] > div[upperbound2],
-div[tripleintegral] > div[upperbound3] {
+div[tripleintegral] > div[upperboundtwo],
+div[tripleintegral] > div[upperboundthree] {
     font-size: 1em;
     font-style: italic;
     height: 25%;
@@ -717,11 +723,11 @@ div[tripleintegral] > div[upperbound3] {
     width: auto;
 }
 
-div[tripleintegral] > div[upperbound2] {
+div[tripleintegral] > div[upperboundtwo] {
     padding-left: 40px;
 }
 
-div[tripleintegral] > div[upperbound3] {
+div[tripleintegral] > div[upperboundthree] {
     padding-left: 58px;
 }
 

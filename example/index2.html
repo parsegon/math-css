@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link href="../math.css" rel="stylesheet">
+</head>
+<body>
+    <div equation>
+
+
+      <div fraction>
+          <div top>
+            <div integral>
+                <div region>
+                    C
+                </div>
+
+                <div of>
+                    <span absolute>35x + 45 + 23</span>
+                </div>
+            </div>
+          </div>
+          <div bottom>
+            2 +
+            <div integral>
+                <div region>
+                    C
+                </div>
+
+                <div of>
+                    <span absolute>35x + 45 + 23</span>
+                </div>
+            </div>
+             + 5
+          </div>
+      </div>
+
+
+
+      <div fraction>
+          <div top>
+            3 + <!-- in general all integrals should work here. Same with summations and products -->
+            + x
+          </div>
+          <div bottom>
+            2 +
+            <!-- in general all integrals should work here. Same with summations and products -->
+             + 5
+          </div>
+      </div>
+
+
+      <div fraction>
+          <div top>
+            2 +
+            <!-- you are going to want any instance of a nested root to be
+            float none. Float only works for the top level since you are chaining.
+            So just override div[fraction] div[root] to be float none
+            -->
+            <div root>
+                <div of>
+                    35x + 45y<sup>2</sup> + 23
+                </div>
+                <div degree>
+                    4
+                </div>
+            </div>
+            + 5
+          </div>
+          <div bottom>
+            2x
+          </div>
+      </div>
+
+
+      <div fraction>
+          <div top>
+            3
+          </div>
+          <div bottom>
+            2 +
+            <div root>
+                <div of>
+                    35x + 45y<sup>2</sup> + 23
+                </div>
+                <div degree>
+                    4
+                </div>
+            </div>
+             + 5
+          </div>
+      </div>
+
+      <div fraction>
+          <div top>
+            <div fraction>
+              <div top>
+                3 +
+                <div root>
+                    <div of>
+                        2x
+                    </div>
+                </div>
+                + 4
+              </div>
+              <div bottom>
+                3 +
+                <div root>
+                    <div of>
+                        2x
+                    </div>
+                </div>
+                + 4
+              </div>
+            </div>
+          </div>
+          <div bottom>
+            <div fraction>
+              <div top>
+                3 +
+                <div root>
+                    <div of>
+                        2x
+                    </div>
+                </div>
+                + 4
+              </div>
+              <div bottom>
+                3 +
+                <div root>
+                    <div of>
+                        2x
+                    </div>
+                </div>
+                + 4
+              </div>
+            </div>
+          </div>
+      </div>
+
+
+      <div root>
+          <div of>
+            5x +
+            <div root>
+                <div of>
+                    35x + 45y<sup>2</sup> + 23
+                </div>
+                <div degree>
+                    4
+                </div>
+            </div>
+          </div>
+          <div degree>
+              4
+          </div>
+      </div>
+
+
+      <div root>
+          <div of>
+            5x +
+            <div root>
+                <div of>
+                  2x +
+                  <div root>
+                      <div of>
+                          35x + 45y<sup>2</sup> + 23 <!-- 3 levels all that's necessary-->
+                      </div>
+                      <div degree>
+                          4
+                      </div>
+                  </div>
+                </div>
+                <div degree>
+                    4
+                </div>
+            </div>
+          </div>
+          <div degree>
+              4
+          </div>
+      </div>
+
+      <div fraction>
+          <div top>
+            <div fraction>
+              <div top>4x</div>
+              <div bottom>5</div>
+            </div>
+          </div>
+          <div bottom>
+            <div root>
+                <div of>
+                    35x + 45y<sup>2</sup> + 23
+                </div>
+                <div degree>
+                    4
+                </div>
+            </div>
+          </div>
+      </div>
+
+      <!-- Replace choose parens to KaTeX equivalent -->
+      <div choose>
+          <div top>
+            3
+          </div>
+          <div bottom>
+            5
+          </div>
+      </div>
+
+
+
+
+
+
+    </div>
+</body>
+</html>
