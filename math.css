@@ -198,6 +198,36 @@ div[integral] > div[upperbound] {
     width: auto;
 }
 
+div[integral] > div[upperbound] > div[fraction],
+div[integral] > div[lowerbound] > div[fraction] {
+    margin-top: -10px;
+    font-size: 0.7rem;
+    height: 40px;
+    padding-left: 0;
+}
+
+div[integral] > div[lowerbound] > div[fraction] {
+    margin-top: 0px;
+}
+div[integral] > div[upperbound] > div[fraction] > div[top],
+div[integral] > div[lowerbound] > div[fraction] > div[top],
+div[integral] > div[upperbound] > div[fraction] > div[bottom],
+div[integral] > div[lowerbound] > div[fraction] > div[bottom] {
+    font-size: 1em;
+    height: auto;
+    top: 0;
+}
+
+div[integral] > div[upperbound] > div[fraction] > div[top],
+div[integral] > div[lowerbound] > div[fraction] > div[top] {
+    padding-bottom: 1px;
+    border-bottom: 1px solid #444;
+}
+
+div[integral] > div[lowerbound] > div[fraction] {
+    position: absolute;
+}
+
 div[integral] > div[lowerbound] {
     font-size: 1em;
     font-style: italic;
