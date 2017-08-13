@@ -364,86 +364,36 @@ div[doubleintegral]::before {
     margin-right: -2px;
 }
 
-div[doubleintegral] > div[upperbound] {
+div[doubleintegral] > div[upperbound], 
+div[doubleintegral] > div[upperbound2] {
     font-size: 1em;
     font-style: italic;
     height: 25%;
-    padding-left: 52px;
-    position: absolute;
-    top: 8px;
-    width: auto;
-}
-
-div[doubleintegral] > div[lowerbound] {
-    font-size: 1em;
-    font-style: italic;
-    height: auto;
-    padding-left: 32px;
-    position: absolute;
-    top: 75px;
-    width: auto;
-}
-
-div[doubleintegral] > div[upperboundtwo] {
-    font-size: 1em;
-    font-style: italic;
-    height: 25%;
-    padding-left: 46px;
-    position: absolute;
-    top: -5px;
-    width: auto;
-}
-
-div[doubleintegral] > div[lowerboundtwo] {
-    font-size: 1em;
-    font-style: italic;
-    height: auto;
     padding-left: 22px;
     position: absolute;
-    top: 85px;
-    width: auto;
-}
-
-
-div[tripleintegral] > div[upperboundtwo] {
-    font-size: 1em;
-    font-style: italic;
-    height: 25%;
-    padding-left: 46px;
-    position: absolute;
     top: -5px;
     width: auto;
 }
 
-div[tripleintegral] > div[lowerboundtwo] {
+div[doubleintegral] > div[upperbound2] {
+    padding-left: 40px;
+}
+
+div[doubleintegral] > div[lowerbound],
+div[doubleintegral] > div[lowerbound2] {
     font-size: 1em;
     font-style: italic;
     height: auto;
-    padding-left: 22px;
+    padding-left: 0px;
     position: absolute;
     top: 85px;
     width: auto;
 }
 
-div[tripleintegral] > div[upperboundthree] {
-    font-size: 1em;
-    font-style: italic;
-    height: 25%;
-    padding-left: 66px;
-    position: absolute;
-    top: -5px;
-    width: auto;
+div[doubleintegral] > div[lowerbound2] {
+    padding-left: 12px;
 }
 
-div[tripleintegral] > div[lowerboundthree] {
-    font-size: 1em;
-    font-style: italic;
-    height: auto;
-    padding-left: 42px;
-    position: absolute;
-    top: 85px;
-    width: auto;
-}
 div[bigintersect]::before {
     content: '\22C2';
     float: left;
@@ -755,24 +705,44 @@ div[tripleintegral]::before {
     line-height: 100px;
 }
 
-div[tripleintegral] > div[upperbound] {
+div[tripleintegral] > div[upperbound],
+div[tripleintegral] > div[upperbound2],
+div[tripleintegral] > div[upperbound3] {
     font-size: 1em;
     font-style: italic;
     height: 25%;
-    padding-left: 70px;
+    padding-left: 22px;
     position: absolute;
-    top: 8px;
+    top: -5px;
     width: auto;
 }
 
-div[tripleintegral] > div[lowerbound] {
+div[tripleintegral] > div[upperbound2] {
+    padding-left: 40px;
+}
+
+div[tripleintegral] > div[upperbound3] {
+    padding-left: 58px;
+}
+
+div[tripleintegral] > div[lowerbound],
+div[tripleintegral] > div[lowerbound2],
+div[tripleintegral] > div[lowerbound3] {
     font-size: 1em;
     font-style: italic;
     height: auto;
-    padding-left: 50px;
+    margin-left: -15px;
     position: absolute;
-    top: 75px;
+    top: 85px;
     width: auto;
+}
+
+div[tripleintegral] > div[lowerbound2] {
+    margin-left: 10px;
+}
+
+div[tripleintegral] > div[lowerbound3] {
+    margin-left: 35px;
 }
 
 div[tripleintegral] > div[region] {
