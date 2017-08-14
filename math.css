@@ -296,6 +296,7 @@ div[root] > div[of] {
     margin-top: -6px;
     padding-left: 0;
     width: auto;
+    vertical-align: middle;
 }
 
 div[root] > div[of] > div[root] {
@@ -1006,14 +1007,16 @@ div[fraction] > div[top] {
 div[fraction] > div[top] > div[root] {
     vertical-align: middle;
     float: none;
-    margin-top: -70px;
+    margin-top: -50px;
     margin-bottom: -60px;
+    font-size: 0.8rem;
 }
 
 div[fraction] > div[bottom] > div[root] {
     margin-top: 5px;
     float: none;
     vertical-align: middle;
+    font-size: 0.8rem;
 }
 
 div[fraction] > div[top] > div[root] > div[degree],
@@ -1049,6 +1052,15 @@ div[fraction] > div[bottom] > div[product] {
     font-size: 0.6rem;
     vertical-align: middle;
     height: 60px;
+}
+
+div[fraction] > div[bottom] > div[integral],
+div[fraction] > div[bottom] > div[doubleintegral],
+div[fraction] > div[bottom] > div[contourintegral],
+div[fraction] > div[bottom] > div[surfaceintegral],
+div[fraction] > div[bottom] > div[volumeintegral],
+div[fraction] > div[bottom] > div[tripleintegral] {
+    margin-top: 3px;
 }
 
 div[fraction] > div[top] > div[integral]::before,
@@ -1122,16 +1134,33 @@ div[fraction] > div[bottom] > div[doubleintegral] > div[region] {
 div[fraction] > div[top] > div[doubleintegral] > div[upperbound],
 div[fraction] > div[bottom] > div[doubleintegral] > div[upperbound] {
     font-size: 0.5rem;
-    margin-left: -12px;
+    margin-left: -20px;
     padding-left: 0;
+    top: 0;
+}
+
+div[fraction] > div[top] > div[doubleintegral] > div[upperboundtwo],
+div[fraction] > div[bottom] > div[doubleintegral] > div[upperboundtwo] {
+    font-size: 0.5rem;
+    margin-left: -20px;
+    padding-left: 40px;
+    top: 0;
 }
 
 div[fraction] > div[top] > div[doubleintegral] > div[lowerbound],
 div[fraction] > div[bottom] > div[doubleintegral] > div[lowerbound] {
     font-size: 0.5rem;
-    margin-left: -22px;
+    margin-left: -35px;
     padding-left: 0;
-    top: 40px;
+    top: 48px;
+}
+
+div[fraction] > div[top] > div[doubleintegral] > div[lowerboundtwo],
+div[fraction] > div[bottom] > div[doubleintegral] > div[lowerboundtwo] {
+    font-size: 0.5rem;
+    margin-left: -35px;
+    padding-left: 40px;
+    top: 48px;
 }
 
 div[fraction] > div[top] > div[doubleintegral] > div[upperbound] > div[fraction],
@@ -1147,6 +1176,87 @@ div[fraction] > div[bottom] > div[doubleintegral] > div[lowerbound] > div[fracti
     font-size: 0.3rem;
     margin-left: -5px;
     height: 20px;
+}
+
+/* Triple Integration bounds */
+div[fraction] > div[top] > div[tripleintegral] > div[region],
+div[fraction] > div[bottom] > div[tripleintegral] > div[region],
+div[fraction] > div[top] > div[tripleintegral] > div[region],
+div[fraction] > div[bottom] > div[tripleintegral] > div[region] {
+    top: 50px;
+    font-size: 0.3rem;
+}
+
+div[fraction] > div[top] > div[tripleintegral] > div[upperbound],
+div[fraction] > div[bottom] > div[tripleintegral] > div[upperbound] {
+    font-size: 0.5rem;
+    margin-left: -20px;
+    padding-left: 0;
+    top: 0;
+}
+
+div[fraction] > div[top] > div[tripleintegral] > div[upperboundtwo],
+div[fraction] > div[bottom] > div[tripleintegral] > div[upperboundtwo] {
+    font-size: 0.5rem;
+    margin-left: -20px;
+    padding-left: 40px;
+    top: 0;
+}
+
+div[fraction] > div[top] > div[tripleintegral] > div[upperboundthree],
+div[fraction] > div[bottom] > div[tripleintegral] > div[upperboundthree] {
+    font-size: 0.5rem;
+    margin-left: -20px;
+    padding-left: 50px;
+    top: 0;
+}
+
+div[fraction] > div[top] > div[tripleintegral] > div[lowerbound],
+div[fraction] > div[bottom] > div[tripleintegral] > div[lowerbound] {
+    font-size: 0.5rem;
+    margin-left: -35px;
+    padding-left: 0;
+    top: 48px;
+}
+
+div[fraction] > div[top] > div[tripleintegral] > div[lowerboundtwo],
+div[fraction] > div[bottom] > div[tripleintegral] > div[lowerboundtwo] {
+    font-size: 0.5rem;
+    margin-left: -40px;
+    padding-left: 45px;
+    top: 48px;
+}
+
+div[fraction] > div[top] > div[tripleintegral] > div[lowerboundthree],
+div[fraction] > div[bottom] > div[tripleintegral] > div[lowerboundthree] {
+    font-size: 0.5rem;
+    margin-left: -40px;
+    padding-left: 58px;
+    top: 48px;
+}
+
+div[fraction] > div[top] > div[tripleintegral] > div[upperbound] > div[fraction],
+div[fraction] > div[bottom] > div[tripleintegral] > div[upperbound] > div[fraction]{
+    font-size: 0.3rem;
+    margin-top: -5px;
+    margin-left: 30px;
+    height: 20px;
+}
+
+div[fraction] > div[top] > div[tripleintegral] > div[lowerbound] > div[fraction],
+div[fraction] > div[bottom] > div[tripleintegral] > div[lowerbound] > div[fraction] {
+    font-size: 0.3rem;
+    margin-left: -5px;
+    height: 20px;
+}
+
+/* VolumeIntegral */
+div[fraction] > div[top] > div[volumeintegral]::after,
+div[fraction] > div[bottom] > div[volumeintegral]::after {
+    width: 26px;
+    height: 15px;
+    top: 20px;
+    left: 13px;
 }
 
 /* Product Bounds */
