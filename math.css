@@ -208,6 +208,7 @@ div[integral] > div[lowerbound] > div[fraction] {
 div[integral] > div[lowerbound] > div[fraction] {
     margin-top: 0px;
 }
+
 div[integral] > div[upperbound] > div[fraction] > div[top],
 div[integral] > div[lowerbound] > div[fraction] > div[top],
 div[integral] > div[upperbound] > div[fraction] > div[bottom],
@@ -223,9 +224,35 @@ div[integral] > div[lowerbound] > div[fraction] > div[top] {
     border-bottom: 1px solid #444;
 }
 
-div[integral] > div[lowerbound] > div[fraction] {
-    position: absolute;
+div[integral] > div[upperbound] > div[root],
+div[integral] > div[lowerbound] > div[root] {
+    margin-top: -10px;
+    font-size: 0.7rem;
+    height: 30px;
+    padding-left: 0;
+    font-size: 0.4rem;
+    margin-left: 10px;
 }
+
+div[integral] > div[lowerbound] > div[root] {
+    top: 10px;
+}
+
+div[integral] > div[upperbound] > div[root] {
+    top: 8px;
+}
+div[integral] > div[upperbound] > div[root]::before,
+div[integral] > div[lowerbound] > div[root]::before {
+    font-size: 0.6rem;
+    margin-top: -12px;
+    margin-left: -10px;
+}
+
+div[integral] > div[upperbound] > div[root] > div[degree],
+div[integral] > div[lowerbound] > div[root] > div[degree] {
+    left: -8px;
+}
+
 
 div[integral] > div[lowerbound] {
     font-size: 1em;
@@ -463,6 +490,51 @@ div[doubleintegral] > div[lowerboundtwo] {
 div[doubleintegral] > div[lowerboundtwo] {
     padding-left: 12px;
 }
+
+div[doubleintegral] > div[upperbound] > div[fraction],
+div[doubleintegral] > div[lowerbound] > div[fraction],
+div[doubleintegral] > div[upperboundtwo] > div[fraction],
+div[doubleintegral] > div[lowerboundtwo] > div[fraction] {
+    margin-top: -10px;
+    font-size: 0.7rem;
+    height: 40px;
+    padding-left: 0;
+}
+
+div[doubleintegral] > div[lowerbound] > div[fraction],
+div[doubleintegral] > div[lowerboundtwo] > div[fraction] {
+
+    margin-top: 4px;
+}
+
+div[doubleintegral] > div[lowerboundtwo] > div[fraction] {
+    padding-left: 8px;
+}
+div[doubleintegral] > div[upperboundtwo] > div[fraction] {
+    padding-left:5px;
+}
+
+div[doubleintegral] > div[upperbound] > div[fraction] > div[top],
+div[doubleintegral] > div[lowerbound] > div[fraction] > div[top],
+div[doubleintegral] > div[upperbound] > div[fraction] > div[bottom],
+div[doubleintegral] > div[lowerbound] > div[fraction] > div[bottom],
+div[doubleintegral] > div[upperboundtwo] > div[fraction] > div[top],
+div[doubleintegral] > div[lowerboundtwo] > div[fraction] > div[top],
+div[doubleintegral] > div[upperboundtwo] > div[fraction] > div[bottom],
+div[doubleintegral] > div[lowerboundtwo] > div[fraction] > div[bottom] {
+    font-size: 1em;
+    height: auto;
+    top: 0;
+}
+
+div[doubleintegral] > div[upperbound] > div[fraction] > div[top],
+div[doubleintegral] > div[lowerbound] > div[fraction] > div[top],
+div[doubleintegral] > div[upperboundtwo] > div[fraction] > div[top],
+div[doubleintegral] > div[lowerboundtwo] > div[fraction] > div[top] {
+    padding-bottom: 1px;
+    border-bottom: 1px solid #444;
+}
+
 
 div[bigintersect]::before {
     content: '\22C2';
@@ -815,6 +887,76 @@ div[tripleintegral] > div[lowerboundthree] {
     margin-left: 35px;
 }
 
+div[tripleintegral] > div[upperbound] > div[fraction],
+div[tripleintegral] > div[lowerbound] > div[fraction],
+div[tripleintegral] > div[upperboundtwo] > div[fraction],
+div[tripleintegral] > div[lowerboundtwo] > div[fraction],
+div[tripleintegral] > div[upperboundthree] > div[fraction],
+div[tripleintegral] > div[lowerboundthree] > div[fraction] {
+    margin-top: -10px;
+    font-size: 0.7rem;
+    height: 40px;
+    padding-left: 0;
+}
+
+div[tripleintegral] > div[lowerbound] > div[fraction],
+div[tripleintegral] > div[lowerboundtwo] > div[fraction],
+div[tripleintegral] > div[lowerboundthree] > div[fraction] {
+
+    margin-top: 4px;
+}
+
+div[tripleintegral] > div[lowerbound] > div[fraction] {
+    padding-left: 15px;
+}
+
+div[tripleintegral] > div[upperbound] > div[fraction] {
+    padding-left:3px;
+}
+div[tripleintegral] > div[lowerboundtwo] > div[fraction] {
+    padding-left: 8px;
+}
+
+div[tripleintegral] > div[upperboundtwo] > div[fraction] {
+    padding-left:3px;
+}
+
+div[tripleintegral] > div[lowerboundthree] > div[fraction] {
+    padding-left: 3px;
+}
+div[
+    tripleintegral] > div[upperboundthree] > div[fraction] {
+    padding-left:5px;
+}
+
+div[tripleintegral] > div[upperbound] > div[fraction] > div[top],
+div[tripleintegral] > div[lowerbound] > div[fraction] > div[top],
+div[tripleintegral] > div[upperbound] > div[fraction] > div[bottom],
+div[tripleintegral] > div[lowerbound] > div[fraction] > div[bottom],
+div[tripleintegral] > div[upperboundtwo] > div[fraction] > div[top],
+div[tripleintegral] > div[lowerboundtwo] > div[fraction] > div[top],
+div[tripleintegral] > div[upperboundtwo] > div[fraction] > div[bottom],
+div[tripleintegral] > div[lowerboundtwo] > div[fraction] > div[bottom],
+div[tripleintegral] > div[upperboundthree] > div[fraction] > div[top],
+div[tripleintegral] > div[lowerboundthree] > div[fraction] > div[top],
+div[tripleintegral] > div[upperboundthree] > div[fraction] > div[bottom],
+div[tripleintegral] > div[lowerboundthree] > div[fraction] > div[bottom] {
+    font-size: 1em;
+    height: auto;
+    top: 0;
+}
+
+div[tripleintegral] > div[upperbound] > div[fraction] > div[top],
+div[tripleintegral] > div[lowerbound] > div[fraction] > div[top],
+div[tripleintegral] > div[upperboundtwo] > div[fraction] > div[top],
+div[tripleintegral] > div[lowerboundtwo] > div[fraction] > div[top],
+div[tripleintegral] > div[upperboundthree] > div[fraction] > div[top],
+div[tripleintegral] > div[lowerboundthree] > div[fraction] > div[top] {
+    padding-bottom: 1px;
+    border-bottom: 1px solid #444;
+}
+
+
 div[tripleintegral] > div[region] {
     font-size: 1.3em;
     font-style: italic;
@@ -1007,7 +1149,7 @@ div[fraction] > div[top] {
 div[fraction] > div[top] > div[root] {
     vertical-align: middle;
     float: none;
-    margin-top: -50px;
+    margin-top: -45px;
     margin-bottom: -60px;
     font-size: 0.8rem;
 }
@@ -1015,7 +1157,7 @@ div[fraction] > div[top] > div[root] {
 div[fraction] > div[bottom] > div[root] {
     margin-top: 5px;
     float: none;
-    vertical-align: middle;
+    vertical-align: top;
     font-size: 0.8rem;
 }
 
@@ -1119,7 +1261,7 @@ div[fraction] > div[bottom] > div[integral] > div[upperbound] > div[fraction]{
 div[fraction] > div[top] > div[integral] > div[lowerbound] > div[fraction],
 div[fraction] > div[bottom] > div[integral] > div[lowerbound] > div[fraction] {
     font-size: 0.3rem;
-    margin-left: -5px;
+    margin-left: 30px;
     height: 20px;
 }
 /* DoubleIntegration bounds */
@@ -1250,6 +1392,14 @@ div[fraction] > div[bottom] > div[tripleintegral] > div[lowerbound] > div[fracti
     height: 20px;
 }
 
+/* SurfaceIntegral */
+div[fraction] > div[top] > div[surfaceintegral]::after,
+div[fraction] > div[bottom] > div[surfaceintegral]::after {
+    width: 18px;
+    height: 15px;
+    top: 20px;
+    left: 12px;
+}
 /* VolumeIntegral */
 div[fraction] > div[top] > div[volumeintegral]::after,
 div[fraction] > div[bottom] > div[volumeintegral]::after {

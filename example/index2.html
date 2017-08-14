@@ -23,9 +23,108 @@
               <div bottom>4</div>
             </div>
           </div>
+          <div of>2x + 5</div>
       </div>
 
-      <div term>2x + 4</div>
+      <div integral>
+          <div upperbound>
+            <div root>
+                <div of>
+                    35x + 2
+                </div>
+                <div degree>
+                    2
+                </div>
+            </div>
+          </div>
+
+          <div lowerbound> <!-- same logic should work for upperboundtwo,
+            upperboundthree, and the lowerboundtwo and lowerboundthree-->
+            <div root>
+                <div of>
+                   3x
+                </div>
+                <div degree>
+                    2
+                </div>
+            </div>
+          </div>
+            <div of>2x + 5</div>
+      </div>
+
+      <div doubleintegral>
+            <div upperbound>
+                <div fraction>
+                    <div top>1</div>
+                    <div bottom>2</div>
+                    </div>
+            </div>
+            <div lowerbound>
+              <div fraction>
+                    <div top>1</div>
+                    <div bottom>8</div>
+                </div>
+            </div>
+            <div upperboundtwo>
+               <div fraction>
+                    <div top>3</div>
+                    <div bottom>8</div>
+                  </div>
+            </div>
+            <div lowerboundtwo>
+                <div fraction>
+                    <div top>1</div>
+                    <div bottom>6</div>
+                  </div>
+            </div>
+            <div of>
+                35y<sup>78</sup> + 45
+            </div>
+            </div>
+        </div>
+
+      <div tripleintegral>
+            <div upperbound>
+                <div fraction>
+                    <div top>1</div>
+                    <div bottom>2</div>
+                    </div>
+            </div>
+            <div lowerbound>
+              <div fraction>
+                    <div top>1</div>
+                    <div bottom>8</div>
+                </div>
+            </div>
+            <div upperboundtwo>
+               <div fraction>
+                    <div top>3</div>
+                    <div bottom>8</div>
+                  </div>
+            </div>
+            <div lowerboundtwo>
+                <div fraction>
+                    <div top>1</div>
+                    <div bottom>6</div>
+                  </div>
+            </div>
+            <div upperboundthree>
+               <div fraction>
+                    <div top>9</div>
+                    <div bottom>8</div>
+                  </div>
+            </div>
+            <div lowerboundthree>
+                <div fraction>
+                    <div top>2</div>
+                    <div bottom>6</div>
+                  </div>
+            </div>
+            <div of>
+                35y + 45
+            </div>
+            </div>
+        </div>
 
       <div fraction>
           <div top>
@@ -186,52 +285,6 @@
           </div>
       </div>
 
-      <div fraction>
-          <div top>
-            2 +
-            <!-- you are going to want any instance of a nested root to be
-            float none. Float only works for the top level since you are chaining.
-            So just override div[fraction] div[root] to be float none
-            -->
-            <div root>
-                <div of>
-                    35x + 45y<sup>2</sup> + 23
-                </div>
-                <div degree>
-                    4
-                </div>
-            </div>
-            + 5
-          </div>
-          <div bottom>
-            2x + 
-            <div root>
-          <div of>
-            5x +
-            <div root>
-                <div of>
-                  2x +
-                  <div root>
-                    <div of>
-                        35x + 45y<sup>2</sup> + 23 <!-- 3 levels all that's necessary-->
-                    </div>
-                    <div degree>
-                        4
-                    </div>
-                    </div>
-                    </div>
-                    <div degree>
-                        4
-                    </div>
-                    </div>
-                    </div>
-            <div degree>
-                4
-            </div>
-        </div>
-          </div>
-      </div>
-
 
       <div fraction>
           <div top>
@@ -371,7 +424,51 @@
           </div>
       </div>
 
-
+      <div fraction>
+          <div top>
+            2 +
+            <!-- you are going to want any instance of a nested root to be
+            float none. Float only works for the top level since you are chaining.
+            So just override div[fraction] div[root] to be float none
+            -->
+            <div root>
+                <div of>
+                    35x + 45y<sup>2</sup> + 23
+                </div>
+                <div degree>
+                    4
+                </div>
+            </div>
+            + 5
+          </div>
+          <div bottom>
+            2x + 
+            <div root>
+          <div of>
+            5x +
+            <div root>
+                <div of>
+                  2x +
+                  <div root>
+                    <div of>
+                        35x + 45y<sup>2</sup> + 23 <!-- 3 levels all that's necessary-->
+                    </div>
+                    <div degree>
+                        4
+                    </div>
+                    </div>
+                    </div>
+                    <div degree>
+                        4
+                    </div>
+                    </div>
+                    </div>
+            <div degree>
+                4
+            </div>
+        </div>
+          </div>
+      </div>
 
 
 
