@@ -488,7 +488,7 @@ div[doubleintegral] > div[lowerboundtwo] {
 }
 
 div[doubleintegral] > div[lowerboundtwo] {
-    padding-left: 12px;
+    padding-left: 15px;
 }
 
 div[doubleintegral] > div[upperbound] > div[fraction],
@@ -508,7 +508,7 @@ div[doubleintegral] > div[lowerboundtwo] > div[fraction] {
 }
 
 div[doubleintegral] > div[lowerboundtwo] > div[fraction] {
-    padding-left: 8px;
+    padding-left: 5px;
 }
 div[doubleintegral] > div[upperboundtwo] > div[fraction] {
     padding-left:5px;
@@ -879,12 +879,15 @@ div[tripleintegral] > div[lowerboundthree] {
     width: auto;
 }
 
+div[tripleintegral] > div[lowerbound] {
+    padding-left: 15px;
+}
 div[tripleintegral] > div[lowerboundtwo] {
-    margin-left: 10px;
+    padding-left: 32px;
 }
 
 div[tripleintegral] > div[lowerboundthree] {
-    margin-left: 35px;
+    padding-left: 50px;
 }
 
 div[tripleintegral] > div[upperbound] > div[fraction],
@@ -906,24 +909,15 @@ div[tripleintegral] > div[lowerboundthree] > div[fraction] {
     margin-top: 4px;
 }
 
-div[tripleintegral] > div[lowerbound] > div[fraction] {
-    padding-left: 15px;
-}
 
 div[tripleintegral] > div[upperbound] > div[fraction] {
     padding-left:3px;
-}
-div[tripleintegral] > div[lowerboundtwo] > div[fraction] {
-    padding-left: 8px;
 }
 
 div[tripleintegral] > div[upperboundtwo] > div[fraction] {
     padding-left:3px;
 }
 
-div[tripleintegral] > div[lowerboundthree] > div[fraction] {
-    padding-left: 3px;
-}
 div[
     tripleintegral] > div[upperboundthree] > div[fraction] {
     padding-left:5px;
